@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/hyperify.css">
+    <title>Document</title>
+
+    <script>
+        window.addEventListener('load', () => {
+            const btnList = document.querySelectorAll('.hyper-btn');
+
+            for (const btn of btnList) {
+                btn.addEventListener('click', () => {
+                    btn.classList.add('active')
+
+                    setTimeout(() => {
+                        btn.classList.remove('active')
+                    }, 300)
+                });
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <a href="#" class="hyper-btn hyper-btn-blue">Link Button</a>
+    <button class="hyper-btn hyper-btn-blue">Button</button>
+    <button class="hyper-btn hyper-btn-sharp hyper-btn-blue">Sharp Button</button>
+    <button class="hyper-btn hyper-btn-outline hyper-btn-blue">Outline Button</button>
+    <button class="hyper-btn hyper-btn-dashed hyper-btn-blue">Dashed Button</button>
+
+    <br><br>
+
+    <button class="hyper-btn hyper-btn-block hyper-btn-blue">Block Button</button>
+
+    <br><br>
+
+    <button class="hyper-btn hyper-btn-sharp hyper-btn-blue" disabled>Disabled Button</button>
+
+    <br><br>
+
+    <button class="hyper-btn hyper-btn-red">Red Button</button>
+    <button class="hyper-btn hyper-btn-volcano">Volcano Button</button>
+    <button class="hyper-btn hyper-btn-orange">Orange Button</button>
+    <button class="hyper-btn hyper-btn-gold">Gold Button</button>
+    <button class="hyper-btn hyper-btn-yellow">Yellow Button</button>
+    <button class="hyper-btn hyper-btn-green">Green Button</button>
+    <button class="hyper-btn hyper-btn-lime">Lime Button</button>
+    <button class="hyper-btn hyper-btn-cyan">Cyan Button</button>
+    <button class="hyper-btn hyper-btn-blue">Blue Button</button>
+    <button class="hyper-btn hyper-btn-navy">Navy Button</button>
+    <button class="hyper-btn hyper-btn-purple">Purple Button</button>
+    <button class="hyper-btn hyper-btn-magenta">Magenta Button</button>
+
+    <br><br>
+
+    <button class="hyper-btn hyper-btn-dark">Dark Button</button>
+    <button class="hyper-btn hyper-btn-gray">Gray Button</button>
+    <button class="hyper-btn hyper-btn-light">Light Button</button>
+
+    <br><br>
+
+    <div class="hyper-btn-group">
+        <button class="hyper-btn hyper-btn-blue">Hyper</button>
+        <button class="hyper-btn hyper-btn-blue">Button</button>
+        <button class="hyper-btn hyper-btn-blue">Group</button>
+    </div>
+</body>
+
+</html>

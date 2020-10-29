@@ -1,0 +1,10 @@
+$RECYCLE.BIN/
+
+/.idea
+/.sass-cache
+/.sourcemaps
+/.versions
+/.vscode
+/node_modules
+
+/package-lock.json

@@ -1,0 +1,15 @@
+{
+  "name": "hyperify",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "sass --watch ./scss/hyperify.scss:./dist/hyperify.css",
+    "build": "sass --style compressed ./scss/hyperify.scss ./dist/hyperify.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.27.0"
+  }
+}
