@@ -1,80 +1,112 @@
 :root {
     --hyper-color-white: #ffffff;
+    --hyper-color-white-rgb: 255, 255, 255;
 
     --hyper-color-black: #000000;
+    --hyper-color-black-rgb: 0, 0, 0;
 
     --hyper-color-red: #f5222d;
     --hyper-color-red-rgb: 245, 34, 45;
     --hyper-color-red-shade: #d81e28;
     --hyper-color-red-tint: #f63842;
+    --hyper-color-red-contrast: #ffffff;
+    --hyper-color-red-contrast-rgb: 255, 255, 255;
 
     --hyper-color-volcano: #fa541c;
     --hyper-color-volcano-rgb: 250, 84, 28;
     --hyper-color-volcano-shade: #dc4a19;
     --hyper-color-volcano-tint: #fb6533;
+    --hyper-color-volcano-contrast: #ffffff;
+    --hyper-color-volcano-contrast-rgb: 255, 255, 255;
 
     --hyper-color-orange: #fa8c16;
     --hyper-color-orange-rgb: 250, 140, 22;
     --hyper-color-orange-shade: #dc7b13;
     --hyper-color-orange-tint: #fb982d;
+    --hyper-color-orange-contrast: #ffffff;
+    --hyper-color-orange-contrast-rgb: 255, 255, 255;
 
     --hyper-color-gold: #faad14;
     --hyper-color-gold-rgb: 250, 173, 20;
     --hyper-color-gold-shade: #dc9812;
     --hyper-color-gold-tint: #fbb52c;
+    --hyper-color-gold-contrast: #ffffff;
+    --hyper-color-gold-contrast-rgb: 255, 255, 255;
 
     --hyper-color-yellow: #fadb14;
     --hyper-color-yellow-rgb: 250, 219, 20;
     --hyper-color-yellow-shade: #dcc112;
     --hyper-color-yellow-tint: #fbdf2c;
+    --hyper-color-yellow-contrast: #000000;
+    --hyper-color-yellow-contrast-rgb: 0, 0, 0;
 
     --hyper-color-green: #52c41a;
     --hyper-color-green-rgb: 82, 196, 26;
     --hyper-color-green-shade: #48ac17;
     --hyper-color-green-tint: #63ca31;
+    --hyper-color-green-contrast: #ffffff;
+    --hyper-color-green-contrast-rgb: 255, 255, 255;
 
     --hyper-color-lime: #a0d911;
     --hyper-color-lime-rgb: 160, 217, 17;
     --hyper-color-lime-shade: #8dbf0f;
     --hyper-color-lime-tint: #aadd29;
+    --hyper-color-lime-contrast: #ffffff;
+    --hyper-color-lime-contrast-rgb: 255, 255, 255;
 
     --hyper-color-cyan: #13c2c2;
     --hyper-color-cyan-rgb: 19, 194, 194;
     --hyper-color-cyan-shade: #11abab;
     --hyper-color-cyan-tint: #2bc8c8;
+    --hyper-color-cyan-contrast: #ffffff;
+    --hyper-color-cyan-contrast-rgb: 255, 255, 255;
 
     --hyper-color-blue: #1890ff;
     --hyper-color-blue-rgb: 24, 144, 255;
     --hyper-color-blue-shade: #157fe0;
     --hyper-color-blue-tint: #2f9bff;
+    --hyper-color-blue-contrast: #ffffff;
+    --hyper-color-blue-contrast-rgb: 255, 255, 255;
 
     --hyper-color-navy: #2f54eb;
     --hyper-color-navy-rgb: 47, 84, 235;
     --hyper-color-navy-shade: #294acf;
     --hyper-color-navy-tint: #4465ed;
+    --hyper-color-navy-contrast: #ffffff;
+    --hyper-color-navy-contrast-rgb: 255, 255, 255;
 
     --hyper-color-purple: #722ed1;
     --hyper-color-purple-rgb: 114, 46, 209;
     --hyper-color-purple-shade: #6428b8;
     --hyper-color-purple-tint: #8043d6;
+    --hyper-color-purple-contrast: #ffffff;
+    --hyper-color-purple-contrast-rgb: 255, 255, 255;
 
     --hyper-color-magenta: #eb2f96;
     --hyper-color-magenta-rgb: 235, 47, 150;
     --hyper-color-magenta-shade: #cf2984;
     --hyper-color-magenta-tint: #ed44a1;
+    --hyper-color-magenta-contrast: #ffffff;
+    --hyper-color-magenta-contrast-rgb: 255, 255, 255;
 
     --hyper-color-gray: #bfbfbf;
     --hyper-color-gray-rgb: 191, 191, 191;
     --hyper-color-gray-shade: #a8a8a8;
     --hyper-color-gray-tint: #c5c5c5;
+    --hyper-color-gray-contrast: #000000;
+    --hyper-color-gray-contrast-rgb: 0, 0, 0;
 
     --hyper-color-light: #f0f0f0;
     --hyper-color-light-rgb: 240, 240, 240;
     --hyper-color-light-shade: #d3d3d3;
     --hyper-color-light-tint: #f2f2f2;
+    --hyper-color-light-contrast: #000000;
+    --hyper-color-light-contrast-rgb: 0, 0, 0;
 
     --hyper-color-dark: #262626;
     --hyper-color-dark-rgb: 38, 38, 38;
     --hyper-color-dark-shade: #212121;
     --hyper-color-dark-tint: #3c3c3c;
+    --hyper-color-dark-contrast: #ffffff;
+    --hyper-color-dark-contrast-rgb: 255, 255, 255;
 }
