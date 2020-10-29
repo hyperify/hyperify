@@ -1,11 +1,3 @@
-@function box-shadow($color) {
-    @return 0 0 0 0.2rem rgba($color, 0.5);
-}
-
-a.hyper-btn {
-    text-decoration: none;
-}
-
 .hyper-btn {
     --hyper-btn-border-radius: 0.75rem;
 
@@ -44,6 +36,10 @@ a.hyper-btn {
     }
 }
 
+a.hyper-btn {
+    text-decoration: none;
+}
+
 .hyper-btn-sharp {
     --hyper-btn-border-radius: 0;
 }
@@ -61,7 +57,7 @@ a.hyper-btn {
         &:not(:disabled):not(.disabled) {
             &:active,
             &.active {
-                box-shadow: box-shadow(var(--hyper-color-#{$color}-rgb));
+                box-shadow: 0 0 0 0.2rem rgba(var(--hyper-color-#{$color}-rgb), 0.5);
             }
 
             &:hover {

@@ -112,10 +112,6 @@ body {
   --hyper-color-dark-contrast-rgb: 255, 255, 255;
 }
 
-a.hyper-btn {
-  text-decoration: none;
-}
-
 .hyper-btn {
   --hyper-btn-border-radius: 0.75rem;
   display: inline-flex;
@@ -144,6 +140,10 @@ a.hyper-btn {
 }
 .hyper-btn.hyper-btn-dashed {
   border-style: dashed;
+}
+
+a.hyper-btn {
+  text-decoration: none;
 }
 
 .hyper-btn-sharp {
