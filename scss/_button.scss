@@ -90,54 +90,54 @@ a.hyper-btn {
     text-decoration: none;
 }
 
-@each $color in $colors {
-    .hyper-btn-#{$color} {
-        color: var(--hyper-color-#{$color}-contrast);
-        background-color: var(--hyper-color-#{$color});
+@each $color-name, $color-map in $colors {
+    .hyper-btn-#{$color-name} {
+        color: var(--hyper-color-#{$color-name}-contrast);
+        background-color: var(--hyper-color-#{$color-name});
 
         &:not(:disabled):not(.disabled):not(.loading) {
             &:active:not(.hyper-btn-text):not(.hyper-btn-link),
             &.active:not(.hyper-btn-text):not(.hyper-btn-link) {
-                box-shadow: 0 0 0 var(--hyper-btn-box-shadow-width) rgba(var(--hyper-color-#{$color}-rgb), 0.5);
+                box-shadow: 0 0 0 var(--hyper-btn-box-shadow-width) rgba(var(--hyper-color-#{$color-name}-rgb), 0.5);
             }
 
             &:not(.hyper-btn-text):not(.hyper-btn-link):hover {
-                background-color: var(--hyper-color-#{$color}-tint);
+                background-color: var(--hyper-color-#{$color-name}-tint);
             }
 
             &:not(.hyper-btn-text):not(.hyper-btn-link):focus {
-                background-color: var(--hyper-color-#{$color}-shade);
+                background-color: var(--hyper-color-#{$color-name}-shade);
             }
         }
 
         &.hyper-btn-text,
         &.hyper-btn-link {
-            color: var(--hyper-color-#{$color});
+            color: var(--hyper-color-#{$color-name});
             background-color: transparent;
 
             &:not(:disabled):not(.disabled):not(.loading) {
                 &:hover {
-                    color: var(--hyper-color-#{$color}-tint);
+                    color: var(--hyper-color-#{$color-name}-tint);
                 }
 
                 &:focus {
-                    color: var(--hyper-color-#{$color}-shade);
+                    color: var(--hyper-color-#{$color-name}-shade);
                 }
             }
         }
 
         &.hyper-btn-outline,
         &.hyper-btn-dashed {
-            color: var(--hyper-color-#{$color});
-            border-color: var(--hyper-color-#{$color});
+            color: var(--hyper-color-#{$color-name});
+            border-color: var(--hyper-color-#{$color-name});
 
             &:not(:disabled):not(.disabled):not(.loading) {
                 &:hover {
-                    color: var(--hyper-color-#{$color}-contrast);
+                    color: var(--hyper-color-#{$color-name}-contrast);
                 }
 
                 &:focus {
-                    color: var(--hyper-color-#{$color}-contrast);
+                    color: var(--hyper-color-#{$color-name}-contrast);
                 }
             }
         }

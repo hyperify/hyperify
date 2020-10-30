@@ -11,7 +11,7 @@ export default class Button extends Component {
         this.element.classList.add('disabled');
     }
 
-    enabled() {
+    enable() {
         this.element.classList.remove('disabled');
         this.element.removeAttribute('disabled');
     }

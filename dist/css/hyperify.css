@@ -100,7 +100,7 @@ body {
   --hyper-color-gray-contrast-rgb: 0, 0, 0;
   --hyper-color-light: #f0f0f0;
   --hyper-color-light-rgb: 240, 240, 240;
-  --hyper-color-light-shade: #d3d3d3;
+  --hyper-color-light-shade: lightgray;
   --hyper-color-light-tint: #f2f2f2;
   --hyper-color-light-contrast: #000000;
   --hyper-color-light-contrast-rgb: 0, 0, 0;
@@ -588,40 +588,6 @@ a.hyper-btn {
   color: var(--hyper-color-magenta-contrast);
 }
 
-.hyper-btn-dark {
-  color: var(--hyper-color-dark-contrast);
-  background-color: var(--hyper-color-dark);
-}
-.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):active:not(.hyper-btn-text):not(.hyper-btn-link), .hyper-btn-dark:not(:disabled):not(.disabled):not(.loading).active:not(.hyper-btn-text):not(.hyper-btn-link) {
-  box-shadow: 0 0 0 var(--hyper-btn-box-shadow-width) rgba(var(--hyper-color-dark-rgb), 0.5);
-}
-.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):not(.hyper-btn-text):not(.hyper-btn-link):hover {
-  background-color: var(--hyper-color-dark-tint);
-}
-.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):not(.hyper-btn-text):not(.hyper-btn-link):focus {
-  background-color: var(--hyper-color-dark-shade);
-}
-.hyper-btn-dark.hyper-btn-text, .hyper-btn-dark.hyper-btn-link {
-  color: var(--hyper-color-dark);
-  background-color: transparent;
-}
-.hyper-btn-dark.hyper-btn-text:not(:disabled):not(.disabled):not(.loading):hover, .hyper-btn-dark.hyper-btn-link:not(:disabled):not(.disabled):not(.loading):hover {
-  color: var(--hyper-color-dark-tint);
-}
-.hyper-btn-dark.hyper-btn-text:not(:disabled):not(.disabled):not(.loading):focus, .hyper-btn-dark.hyper-btn-link:not(:disabled):not(.disabled):not(.loading):focus {
-  color: var(--hyper-color-dark-shade);
-}
-.hyper-btn-dark.hyper-btn-outline, .hyper-btn-dark.hyper-btn-dashed {
-  color: var(--hyper-color-dark);
-  border-color: var(--hyper-color-dark);
-}
-.hyper-btn-dark.hyper-btn-outline:not(:disabled):not(.disabled):not(.loading):hover, .hyper-btn-dark.hyper-btn-dashed:not(:disabled):not(.disabled):not(.loading):hover {
-  color: var(--hyper-color-dark-contrast);
-}
-.hyper-btn-dark.hyper-btn-outline:not(:disabled):not(.disabled):not(.loading):focus, .hyper-btn-dark.hyper-btn-dashed:not(:disabled):not(.disabled):not(.loading):focus {
-  color: var(--hyper-color-dark-contrast);
-}
-
 .hyper-btn-gray {
   color: var(--hyper-color-gray-contrast);
   background-color: var(--hyper-color-gray);
@@ -688,6 +654,40 @@ a.hyper-btn {
 }
 .hyper-btn-light.hyper-btn-outline:not(:disabled):not(.disabled):not(.loading):focus, .hyper-btn-light.hyper-btn-dashed:not(:disabled):not(.disabled):not(.loading):focus {
   color: var(--hyper-color-light-contrast);
+}
+
+.hyper-btn-dark {
+  color: var(--hyper-color-dark-contrast);
+  background-color: var(--hyper-color-dark);
+}
+.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):active:not(.hyper-btn-text):not(.hyper-btn-link), .hyper-btn-dark:not(:disabled):not(.disabled):not(.loading).active:not(.hyper-btn-text):not(.hyper-btn-link) {
+  box-shadow: 0 0 0 var(--hyper-btn-box-shadow-width) rgba(var(--hyper-color-dark-rgb), 0.5);
+}
+.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):not(.hyper-btn-text):not(.hyper-btn-link):hover {
+  background-color: var(--hyper-color-dark-tint);
+}
+.hyper-btn-dark:not(:disabled):not(.disabled):not(.loading):not(.hyper-btn-text):not(.hyper-btn-link):focus {
+  background-color: var(--hyper-color-dark-shade);
+}
+.hyper-btn-dark.hyper-btn-text, .hyper-btn-dark.hyper-btn-link {
+  color: var(--hyper-color-dark);
+  background-color: transparent;
+}
+.hyper-btn-dark.hyper-btn-text:not(:disabled):not(.disabled):not(.loading):hover, .hyper-btn-dark.hyper-btn-link:not(:disabled):not(.disabled):not(.loading):hover {
+  color: var(--hyper-color-dark-tint);
+}
+.hyper-btn-dark.hyper-btn-text:not(:disabled):not(.disabled):not(.loading):focus, .hyper-btn-dark.hyper-btn-link:not(:disabled):not(.disabled):not(.loading):focus {
+  color: var(--hyper-color-dark-shade);
+}
+.hyper-btn-dark.hyper-btn-outline, .hyper-btn-dark.hyper-btn-dashed {
+  color: var(--hyper-color-dark);
+  border-color: var(--hyper-color-dark);
+}
+.hyper-btn-dark.hyper-btn-outline:not(:disabled):not(.disabled):not(.loading):hover, .hyper-btn-dark.hyper-btn-dashed:not(:disabled):not(.disabled):not(.loading):hover {
+  color: var(--hyper-color-dark-contrast);
+}
+.hyper-btn-dark.hyper-btn-outline:not(:disabled):not(.disabled):not(.loading):focus, .hyper-btn-dark.hyper-btn-dashed:not(:disabled):not(.disabled):not(.loading):focus {
+  color: var(--hyper-color-dark-contrast);
 }
 
 .hyper-btn-group {
