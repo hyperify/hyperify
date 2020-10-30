@@ -4,18 +4,51 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.hyperify = {}));
 }(this, (function (exports) { 'use strict';
 
-    class Button {
-        constructor() {
-            this.name = 'btn';
+    class Component {
+        constructor(arg) {
+            if (typeof arg === 'string') {
+                this.element = document.querySelector(arg);
+            }
+            else {
+                this.element = arg;
+            }
         }
     }
+
+    class Button extends Component {
+        constructor(arg) {
+            super(arg);
+        }
+        disable() {
+            this.element.classList.add('disabled');
+        }
+        enabled() {
+            this.element.classList.remove('disabled');
+            this.element.removeAttribute('disabled');
+        }
+        isDisable() {
+            return this.element.classList.contains('disabled');
+        }
+        loading() {
+            this.element.classList.add('loading');
+        }
+        finish() {
+            this.element.classList.remove('loading');
+        }
+        isLoading() {
+            return this.element.classList.contains('loading');
+        }
+    }
+    Button.SELECTORS = '.hyper-btn';
     window.addEventListener('load', () => {
-        const btnList = document.querySelectorAll('.hyper-btn');
-        for (const btn of btnList) {
+        const list = document.querySelectorAll(Button.SELECTORS);
+        for (const btn of list) {
             btn.addEventListener('click', () => {
+                btn.activeTimer && clearTimeout(btn.activeTimer);
                 btn.classList.add('active');
-                setTimeout(() => {
+                btn.activeTimer = window.setTimeout(() => {
                     btn.classList.remove('active');
+                    btn.activeTimer = null;
                 }, 300);
             });
         }

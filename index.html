@@ -15,17 +15,23 @@
 </head>
 
 <body>
+    <input class="hyper-btn hyper-btn-blue" type="button" value="Input Button">
     <a href="#" class="hyper-btn hyper-btn-blue">Link Button</a>
-    <button class="hyper-btn hyper-btn-blue">Button</button>
+    <span class="hyper-btn hyper-btn-text hyper-btn-blue">Text Button</span>
+    <a href="#" class="hyper-btn hyper-btn-link hyper-btn-blue">Link Button</a>
     <button class="hyper-btn hyper-btn-sharp hyper-btn-blue">Sharp Button</button>
     <button class="hyper-btn hyper-btn-round hyper-btn-blue">Round Button</button>
 
     <br><br>
 
+    <button class="hyper-btn hyper-btn-sm hyper-btn-blue">Small Button</button>
+    <button class="hyper-btn hyper-btn-blue">Default Button</button>
+    <button class="hyper-btn hyper-btn-lg hyper-btn-blue">Large Button</button>
+
+    <br><br>
+
     <button class="hyper-btn hyper-btn-outline hyper-btn-blue">Outline Button</button>
     <button class="hyper-btn hyper-btn-dashed hyper-btn-blue">Dashed Button</button>
-    <button class="hyper-btn hyper-btn-sm hyper-btn-outline hyper-btn-blue">Small Button</button>
-    <button class="hyper-btn hyper-btn-lg hyper-btn-outline hyper-btn-blue">Large Button</button>
 
     <br><br>
 
@@ -33,7 +39,8 @@
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-sharp hyper-btn-blue" disabled>Disabled Button</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue">Disabled Button</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue loading">Loading Button</button>
 
     <br><br>
 
@@ -84,6 +91,11 @@
     </div>
 
     <script src="./dist/js/hyperify.min.js"></script>
+    <script>
+        const { Button } = hyperify;
+        const btn = new Button('#disabled-btn');
+        btn.disable();
+    </script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
         outline: none;
     }
 
-    &:not(:disabled):not(.disabled) {
+    &:not(:disabled):not(.disabled):not(.loading) {
         cursor: pointer;
     }
 
@@ -62,6 +62,12 @@
         border-style: dashed;
     }
 
+    &.hyper-btn-link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &.hyper-btn-sm {
         --hyper-btn-border-radius: 0.5rem;
         --hyper-btn-border-width: 0.075rem;
@@ -89,18 +95,34 @@ a.hyper-btn {
         color: var(--hyper-color-#{$color}-contrast);
         background-color: var(--hyper-color-#{$color});
 
-        &:not(:disabled):not(.disabled) {
-            &:active,
-            &.active {
+        &:not(:disabled):not(.disabled):not(.loading) {
+            &:active:not(.hyper-btn-text):not(.hyper-btn-link),
+            &.active:not(.hyper-btn-text):not(.hyper-btn-link) {
                 box-shadow: 0 0 0 var(--hyper-btn-box-shadow-width) rgba(var(--hyper-color-#{$color}-rgb), 0.5);
             }
 
-            &:hover {
+            &:not(.hyper-btn-text):not(.hyper-btn-link):hover {
                 background-color: var(--hyper-color-#{$color}-tint);
             }
 
-            &:focus {
+            &:not(.hyper-btn-text):not(.hyper-btn-link):focus {
                 background-color: var(--hyper-color-#{$color}-shade);
+            }
+        }
+
+        &.hyper-btn-text,
+        &.hyper-btn-link {
+            color: var(--hyper-color-#{$color});
+            background-color: transparent;
+
+            &:not(:disabled):not(.disabled):not(.loading) {
+                &:hover {
+                    color: var(--hyper-color-#{$color}-tint);
+                }
+
+                &:focus {
+                    color: var(--hyper-color-#{$color}-shade);
+                }
             }
         }
 
@@ -109,7 +131,7 @@ a.hyper-btn {
             color: var(--hyper-color-#{$color});
             border-color: var(--hyper-color-#{$color});
 
-            &:not(:disabled):not(.disabled) {
+            &:not(:disabled):not(.disabled):not(.loading) {
                 &:hover {
                     color: var(--hyper-color-#{$color}-contrast);
                 }

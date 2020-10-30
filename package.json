@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npm-run-all --parallel sass-watch sass-watch:minify ts-watch",
-    "build": "npm-run-all sass-build ts-build",
+    "build": "npm-run-all --parallel sass-build ts-build",
     "sass-watch": "sass --watch ./scss/hyperify.scss:./dist/css/hyperify.css",
     "ts-watch": "rollup --watch --sourcemap --config rollup.config.js",
     "sass-build": "sass --style compressed ./scss/hyperify.scss ./dist/css/hyperify.min.css",
