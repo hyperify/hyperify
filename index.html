@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/hyperify.css">
+    <link rel="stylesheet" href="./dist/css/hyperify.min.css">
     <title>Hyperify</title>
 
     <style>
@@ -12,30 +12,20 @@
             margin: 1rem !important;
         }
     </style>
-
-    <script>
-        window.addEventListener('load', () => {
-            const btnList = document.querySelectorAll('.hyper-btn');
-
-            for (const btn of btnList) {
-                btn.addEventListener('click', () => {
-                    btn.classList.add('active')
-
-                    setTimeout(() => {
-                        btn.classList.remove('active')
-                    }, 300)
-                });
-            }
-        })
-    </script>
 </head>
 
 <body>
     <a href="#" class="hyper-btn hyper-btn-blue">Link Button</a>
     <button class="hyper-btn hyper-btn-blue">Button</button>
     <button class="hyper-btn hyper-btn-sharp hyper-btn-blue">Sharp Button</button>
+    <button class="hyper-btn hyper-btn-round hyper-btn-blue">Round Button</button>
+
+    <br><br>
+
     <button class="hyper-btn hyper-btn-outline hyper-btn-blue">Outline Button</button>
     <button class="hyper-btn hyper-btn-dashed hyper-btn-blue">Dashed Button</button>
+    <button class="hyper-btn hyper-btn-sm hyper-btn-outline hyper-btn-blue">Small Button</button>
+    <button class="hyper-btn hyper-btn-lg hyper-btn-outline hyper-btn-blue">Large Button</button>
 
     <br><br>
 
@@ -52,16 +42,19 @@
     <button class="hyper-btn hyper-btn-orange">Orange Button</button>
     <button class="hyper-btn hyper-btn-gold">Gold Button</button>
     <button class="hyper-btn hyper-btn-yellow">Yellow Button</button>
+
+    <br><br>
+
     <button class="hyper-btn hyper-btn-green">Green Button</button>
     <button class="hyper-btn hyper-btn-lime">Lime Button</button>
     <button class="hyper-btn hyper-btn-cyan">Cyan Button</button>
     <button class="hyper-btn hyper-btn-blue">Blue Button</button>
     <button class="hyper-btn hyper-btn-navy">Navy Button</button>
-    <button class="hyper-btn hyper-btn-purple">Purple Button</button>
-    <button class="hyper-btn hyper-btn-magenta">Magenta Button</button>
 
     <br><br>
 
+    <button class="hyper-btn hyper-btn-purple">Purple Button</button>
+    <button class="hyper-btn hyper-btn-magenta">Magenta Button</button>
     <button class="hyper-btn hyper-btn-dark">Dark Button</button>
     <button class="hyper-btn hyper-btn-gray">Gray Button</button>
     <button class="hyper-btn hyper-btn-light">Light Button</button>
@@ -73,6 +66,24 @@
         <button class="hyper-btn hyper-btn-blue">Button</button>
         <button class="hyper-btn hyper-btn-blue">Group</button>
     </div>
+
+    <br><br>
+
+    <div class="hyper-btn-group">
+        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Hyper</button>
+        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Button</button>
+        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Group</button>
+    </div>
+
+    <br><br>
+
+    <div class="hyper-btn-group">
+        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Hyper</button>
+        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Button</button>
+        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Group</button>
+    </div>
+
+    <script src="./dist/js/hyperify.min.js"></script>
 </body>
 
 </html>

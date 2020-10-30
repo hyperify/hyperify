@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "sass --watch ./scss/hyperify.scss:./dist/hyperify.css",
-    "build": "sass --style compressed ./scss/hyperify.scss ./dist/hyperify.min.css",
+    "start": "npm-run-all --parallel sass-watch sass-watch:minify ts-watch",
+    "build": "npm-run-all sass-build ts-build",
+    "sass-watch": "sass --watch ./scss/hyperify.scss:./dist/css/hyperify.css",
+    "ts-watch": "rollup --watch --sourcemap --config rollup.config.js",
+    "sass-build": "sass --style compressed ./scss/hyperify.scss ./dist/css/hyperify.min.css",
+    "ts-build": "rollup --sourcemap --config rollup.config.js",
+    "sass-watch:minify": "sass --watch --style compressed ./scss/hyperify.scss ./dist/css/hyperify.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.27.0"
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.32.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "sass": "^1.27.0",
+    "typescript": "^4.0.5"
   }
 }
