@@ -15,6 +15,19 @@
 </head>
 
 <body>
+    <div id="hyper-alert" class="hyper-alert hyper-alert-red hyper-alert-flash">
+        hyper-alert hyper-alert
+    </div>
+
+    <br>
+
+    <div class="hyper-alert hyper-alert-lime hyper-alert-dismissable">
+        hyper-alert hyper-alert
+        <button class="hyper-alert-close-btn">&times;</button>
+    </div>
+
+    <br>
+
     <input class="hyper-btn hyper-btn-blue" type="button" value="Input Button">
     <a href="#" class="hyper-btn hyper-btn-blue">Link Button</a>
     <span class="hyper-btn hyper-btn-text hyper-btn-blue">Text Button</span>
@@ -37,7 +50,7 @@
 
     <button class="hyper-btn hyper-btn-block hyper-btn-blue">Block Button</button>
 
-    <br><br>
+    <br>
 
     <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue">Disabled Button</button>
     <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue loading">Loading Button</button>
@@ -90,11 +103,21 @@
         <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Group</button>
     </div>
 
-    <script src="./dist/js/hyperify.min.js"></script>
-    <script>
-        const { Button } = hyperify;
+    <script type="module">
+        import { Button, Alert } from './dist/js/hyperify.esm.min.js';
+
         const btn = new Button('#disabled-btn');
         btn.disable();
+
+        const alert = new Alert('#hyper-alert');
+
+        setInterval(() => {
+            alert.dismiss();
+
+            setTimeout(() => {
+                alert.present();
+            }, 1000);
+        }, 3000);
     </script>
 </body>
 

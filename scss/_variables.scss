@@ -16,95 +16,95 @@ $gray: #bfbfbf;
 $light: #f0f0f0;
 $dark: #262626;
 
-$white: #ffffff;
-$black: #000000;
+$white: #fff;
+$black: #000;
 
 $colors: (
-    red: (
+    "red": (
         base: $red,
         shade: get-color-shade($red),
         tint: get-color-tint($red),
         contrast: #ffffff,
     ),
-    volcano: (
+    "volcano": (
         base: $volcano,
         shade: get-color-shade($volcano),
         tint: get-color-tint($volcano),
         contrast: #ffffff,
     ),
-    orange: (
+    "orange": (
         base: $orange,
         shade: get-color-shade($orange),
         tint: get-color-tint($orange),
         contrast: #ffffff,
     ),
-    gold: (
+    "gold": (
         base: $gold,
         shade: get-color-shade($gold),
         tint: get-color-tint($gold),
         contrast: #ffffff,
     ),
-    yellow: (
+    "yellow": (
         base: $yellow,
         shade: get-color-shade($yellow),
         tint: get-color-tint($yellow),
         contrast: #000000,
     ),
-    green: (
+    "green": (
         base: $green,
         shade: get-color-shade($green),
         tint: get-color-tint($green),
         contrast: #ffffff,
     ),
-    lime: (
+    "lime": (
         base: $lime,
         shade: get-color-shade($lime),
         tint: get-color-tint($lime),
         contrast: #ffffff,
     ),
-    cyan: (
+    "cyan": (
         base: $cyan,
         shade: get-color-shade($cyan),
         tint: get-color-tint($cyan),
         contrast: #ffffff,
     ),
-    blue: (
+    "blue": (
         base: $blue,
         shade: get-color-shade($blue),
         tint: get-color-tint($blue),
         contrast: #ffffff,
     ),
-    navy: (
+    "navy": (
         base: $navy,
         shade: get-color-shade($navy),
         tint: get-color-tint($navy),
         contrast: #ffffff,
     ),
-    purple: (
+    "purple": (
         base: $purple,
         shade: get-color-shade($purple),
         tint: get-color-tint($purple),
         contrast: #ffffff,
     ),
-    magenta: (
+    "magenta": (
         base: $magenta,
         shade: get-color-shade($magenta),
         tint: get-color-tint($magenta),
         contrast: #ffffff,
     ),
-    gray: (
+    "gray": (
         base: $gray,
         shade: get-color-shade($gray),
         tint: get-color-tint($gray),
         contrast: #000000,
     ),
-    light: (
+    "light": (
         base: $light,
         shade: get-color-shade($light),
         tint: get-color-tint($light),
         contrast: #000000,
     ),
-    dark: (
+    "dark": (
         base: $dark,
         shade: get-color-shade($dark),
         tint: get-color-tint($dark),

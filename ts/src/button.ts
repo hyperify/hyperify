@@ -33,7 +33,7 @@ export default class Button extends Component {
     }
 }
 
-interface IButton extends Element {
+interface IButton extends HTMLElement {
     activeTimer: number;
 }
 

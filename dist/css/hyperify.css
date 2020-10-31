@@ -9,6 +9,26 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+button:focus {
+  outline: none;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -16,9 +36,9 @@ body {
 }
 
 :root {
-  --hyper-color-white: #ffffff;
+  --hyper-color-white: #fff;
   --hyper-color-white-rgb: 255, 255, 255;
-  --hyper-color-black: #000000;
+  --hyper-color-black: #000;
   --hyper-color-black-rgb: 0, 0, 0;
   --hyper-color-red: #f5222d;
   --hyper-color-red-rgb: 245, 34, 45;
@@ -112,26 +132,184 @@ body {
   --hyper-color-dark-contrast-rgb: 255, 255, 255;
 }
 
+.hyper-alert {
+  --hyper-alert-border-radius: 0.75rem;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--hyper-alert-border-radius);
+  overflow: hidden;
+  transition: opacity ease-in-out 0.25s;
+}
+.hyper-alert.hyper-alert-flash {
+  animation: hyper-alert-flash ease-in-out 1s infinite;
+}
+.hyper-alert.hyper-alert-sharp {
+  --hyper-alert-border-radius: 0;
+}
+.hyper-alert.hyper-alert-dismissable {
+  padding-right: 1.75rem;
+}
+.hyper-alert .hyper-alert-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  opacity: 0.75;
+  transition: opacity ease-in-out 0.25s;
+}
+.hyper-alert .hyper-alert-close-btn:hover {
+  opacity: 1;
+}
+
+.hyper-alert-red {
+  color: #7b1117;
+  background-color: #fdc8cb;
+}
+.hyper-alert-red .hyper-alert-close-btn {
+  color: #7b1117;
+}
+
+.hyper-alert-volcano {
+  color: #7d2a0e;
+  background-color: #fed4c6;
+}
+.hyper-alert-volcano .hyper-alert-close-btn {
+  color: #7d2a0e;
+}
+
+.hyper-alert-orange {
+  color: #7d460b;
+  background-color: #fee2c5;
+}
+.hyper-alert-orange .hyper-alert-close-btn {
+  color: #7d460b;
+}
+
+.hyper-alert-gold {
+  color: #7d570a;
+  background-color: #feebc4;
+}
+.hyper-alert-gold .hyper-alert-close-btn {
+  color: #7d570a;
+}
+
+.hyper-alert-yellow {
+  color: #7d6e0a;
+  background-color: #fef6c4;
+}
+.hyper-alert-yellow .hyper-alert-close-btn {
+  color: #7d6e0a;
+}
+
+.hyper-alert-green {
+  color: #29620d;
+  background-color: #d4f0c6;
+}
+.hyper-alert-green .hyper-alert-close-btn {
+  color: #29620d;
+}
+
+.hyper-alert-lime {
+  color: #506d09;
+  background-color: #e7f6c4;
+}
+.hyper-alert-lime .hyper-alert-close-btn {
+  color: #506d09;
+}
+
+.hyper-alert-cyan {
+  color: #0a6161;
+  background-color: #c4f0f0;
+}
+.hyper-alert-cyan .hyper-alert-close-btn {
+  color: #0a6161;
+}
+
+.hyper-alert-blue {
+  color: #0c4880;
+  background-color: #c5e3ff;
+}
+.hyper-alert-blue .hyper-alert-close-btn {
+  color: #0c4880;
+}
+
+.hyper-alert-navy {
+  color: #182a76;
+  background-color: #cbd4fa;
+}
+.hyper-alert-navy .hyper-alert-close-btn {
+  color: #182a76;
+}
+
+.hyper-alert-purple {
+  color: #391769;
+  background-color: #dccbf4;
+}
+.hyper-alert-purple .hyper-alert-close-btn {
+  color: #391769;
+}
+
+.hyper-alert-magenta {
+  color: #76184b;
+  background-color: #facbe5;
+}
+.hyper-alert-magenta .hyper-alert-close-btn {
+  color: #76184b;
+}
+
+.hyper-alert-gray {
+  color: #606060;
+  background-color: #efefef;
+}
+.hyper-alert-gray .hyper-alert-close-btn {
+  color: #606060;
+}
+
+.hyper-alert-light {
+  color: #787878;
+  background-color: #fbfbfb;
+}
+.hyper-alert-light .hyper-alert-close-btn {
+  color: #787878;
+}
+
+.hyper-alert-dark {
+  color: #131313;
+  background-color: #c9c9c9;
+}
+.hyper-alert-dark .hyper-alert-close-btn {
+  color: #131313;
+}
+
+@keyframes hyper-alert-flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .hyper-btn {
   --hyper-btn-border-radius: 0.75rem;
   --hyper-btn-border-width: 0.1rem;
   --hyper-btn-box-shadow-width: 0.2rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   vertical-align: middle;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  user-select: none;
   border: var(--hyper-btn-border-width) solid transparent;
   border-radius: var(--hyper-btn-border-radius);
   transition: box-shadow 0.25s ease-in, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
-.hyper-btn:focus {
-  outline: none;
-}
-.hyper-btn:not(:disabled):not(.disabled):not(.loading) {
+.hyper-btn:not(.disabled):not(.loading) {
   cursor: pointer;
 }
 .hyper-btn:disabled, .hyper-btn.disabled, .hyper-btn.loading {

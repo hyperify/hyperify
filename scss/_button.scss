@@ -5,23 +5,15 @@
     --hyper-btn-border-width: 0.1rem;
     --hyper-btn-box-shadow-width: 0.2rem;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     vertical-align: middle;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    user-select: none;
     border: var(--hyper-btn-border-width) solid transparent;
     border-radius: var(--hyper-btn-border-radius);
     transition: box-shadow 0.25s ease-in, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
-    &:focus {
-        outline: none;
-    }
-
-    &:not(:disabled):not(.disabled):not(.loading) {
+    &:not(.disabled):not(.loading) {
         cursor: pointer;
     }
 

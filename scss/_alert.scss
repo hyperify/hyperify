@@ -1,0 +1,66 @@
+@import "variables";
+
+.hyper-alert {
+    --hyper-alert-border-radius: 0.75rem;
+
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--hyper-alert-border-radius);
+    overflow: hidden;
+    transition: opacity ease-in-out 0.25s;
+
+    &.hyper-alert-flash {
+        animation: hyper-alert-flash ease-in-out 1s infinite;
+    }
+
+    &.hyper-alert-sharp {
+        --hyper-alert-border-radius: 0;
+    }
+
+    &.hyper-alert-dismissable {
+        padding-right: 1.75rem;
+    }
+
+    .hyper-alert-close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        border: none;
+        opacity: 0.75;
+        transition: opacity ease-in-out 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@each $color-name, $color-map in $colors {
+    .hyper-alert-#{$color-name} {
+        color: #{mix(#000, map-get($color-map, base), 50%)};
+        background-color: #{mix(#fff, map-get($color-map, base), 75%)};
+
+        .hyper-alert-close-btn {
+            color: #{mix(#000, map-get($color-map, base), 50%)};
+        }
+    }
+}
+
+@keyframes hyper-alert-flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
