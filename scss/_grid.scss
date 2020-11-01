@@ -1,0 +1,16 @@
+.hyper-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@for $i from 1 through 24 {
+    @if $i % 2 == 0 {
+        .hyper-col-#{$i} {
+            $percentage: 100% / (24 / $i);
+
+            display: block;
+            flex: 0 0 #{$percentage};
+            max-width: #{$percentage};
+        }
+    }
+}

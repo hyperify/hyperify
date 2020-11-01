@@ -161,7 +161,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 1.75rem;
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
@@ -1116,6 +1116,83 @@ a.hyper-btn {
 .hyper-btn-group .hyper-btn-outline:not(:last-child),
 .hyper-btn-group .hyper-btn-dashed:not(:last-child) {
   border-right-width: 0;
+}
+
+.hyper-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hyper-col-2 {
+  display: block;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+
+.hyper-col-4 {
+  display: block;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.hyper-col-6 {
+  display: block;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.hyper-col-8 {
+  display: block;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.hyper-col-10 {
+  display: block;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+
+.hyper-col-12 {
+  display: block;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.hyper-col-14 {
+  display: block;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+
+.hyper-col-16 {
+  display: block;
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.hyper-col-18 {
+  display: block;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.hyper-col-20 {
+  display: block;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.hyper-col-22 {
+  display: block;
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+}
+
+.hyper-col-24 {
+  display: block;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=hyperify.css.map */
