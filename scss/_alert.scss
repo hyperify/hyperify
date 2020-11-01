@@ -49,11 +49,11 @@
 
 @each $color-name, $color-map in $colors {
     .hyper-alert-#{$color-name} {
-        color: #{mix(#000, map-get($color-map, base), 50%)};
-        background-color: #{mix(#fff, map-get($color-map, base), 75%)};
+        color: var(--hyper-color-#{$color-name});
+        background-color: rgba(var(--hyper-color-#{$color-name}-rgb), 0.25);
 
         .hyper-alert-close-btn {
-            color: #{mix(#000, map-get($color-map, base), 50%)};
+            color: var(--hyper-color-#{$color-name});
         }
     }
 }

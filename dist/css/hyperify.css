@@ -177,123 +177,123 @@ body {
 }
 
 .hyper-alert-red {
-  color: #7b1117;
-  background-color: #fdc8cb;
+  color: var(--hyper-color-red);
+  background-color: rgba(var(--hyper-color-red-rgb), 0.25);
 }
 .hyper-alert-red .hyper-alert-close-btn {
-  color: #7b1117;
+  color: var(--hyper-color-red);
 }
 
 .hyper-alert-volcano {
-  color: #7d2a0e;
-  background-color: #fed4c6;
+  color: var(--hyper-color-volcano);
+  background-color: rgba(var(--hyper-color-volcano-rgb), 0.25);
 }
 .hyper-alert-volcano .hyper-alert-close-btn {
-  color: #7d2a0e;
+  color: var(--hyper-color-volcano);
 }
 
 .hyper-alert-orange {
-  color: #7d460b;
-  background-color: #fee2c5;
+  color: var(--hyper-color-orange);
+  background-color: rgba(var(--hyper-color-orange-rgb), 0.25);
 }
 .hyper-alert-orange .hyper-alert-close-btn {
-  color: #7d460b;
+  color: var(--hyper-color-orange);
 }
 
 .hyper-alert-gold {
-  color: #7d570a;
-  background-color: #feebc4;
+  color: var(--hyper-color-gold);
+  background-color: rgba(var(--hyper-color-gold-rgb), 0.25);
 }
 .hyper-alert-gold .hyper-alert-close-btn {
-  color: #7d570a;
+  color: var(--hyper-color-gold);
 }
 
 .hyper-alert-yellow {
-  color: #7d6e0a;
-  background-color: #fef6c4;
+  color: var(--hyper-color-yellow);
+  background-color: rgba(var(--hyper-color-yellow-rgb), 0.25);
 }
 .hyper-alert-yellow .hyper-alert-close-btn {
-  color: #7d6e0a;
+  color: var(--hyper-color-yellow);
 }
 
 .hyper-alert-green {
-  color: #29620d;
-  background-color: #d4f0c6;
+  color: var(--hyper-color-green);
+  background-color: rgba(var(--hyper-color-green-rgb), 0.25);
 }
 .hyper-alert-green .hyper-alert-close-btn {
-  color: #29620d;
+  color: var(--hyper-color-green);
 }
 
 .hyper-alert-lime {
-  color: #506d09;
-  background-color: #e7f6c4;
+  color: var(--hyper-color-lime);
+  background-color: rgba(var(--hyper-color-lime-rgb), 0.25);
 }
 .hyper-alert-lime .hyper-alert-close-btn {
-  color: #506d09;
+  color: var(--hyper-color-lime);
 }
 
 .hyper-alert-cyan {
-  color: #0a6161;
-  background-color: #c4f0f0;
+  color: var(--hyper-color-cyan);
+  background-color: rgba(var(--hyper-color-cyan-rgb), 0.25);
 }
 .hyper-alert-cyan .hyper-alert-close-btn {
-  color: #0a6161;
+  color: var(--hyper-color-cyan);
 }
 
 .hyper-alert-blue {
-  color: #0c4880;
-  background-color: #c5e3ff;
+  color: var(--hyper-color-blue);
+  background-color: rgba(var(--hyper-color-blue-rgb), 0.25);
 }
 .hyper-alert-blue .hyper-alert-close-btn {
-  color: #0c4880;
+  color: var(--hyper-color-blue);
 }
 
 .hyper-alert-navy {
-  color: #182a76;
-  background-color: #cbd4fa;
+  color: var(--hyper-color-navy);
+  background-color: rgba(var(--hyper-color-navy-rgb), 0.25);
 }
 .hyper-alert-navy .hyper-alert-close-btn {
-  color: #182a76;
+  color: var(--hyper-color-navy);
 }
 
 .hyper-alert-purple {
-  color: #391769;
-  background-color: #dccbf4;
+  color: var(--hyper-color-purple);
+  background-color: rgba(var(--hyper-color-purple-rgb), 0.25);
 }
 .hyper-alert-purple .hyper-alert-close-btn {
-  color: #391769;
+  color: var(--hyper-color-purple);
 }
 
 .hyper-alert-magenta {
-  color: #76184b;
-  background-color: #facbe5;
+  color: var(--hyper-color-magenta);
+  background-color: rgba(var(--hyper-color-magenta-rgb), 0.25);
 }
 .hyper-alert-magenta .hyper-alert-close-btn {
-  color: #76184b;
+  color: var(--hyper-color-magenta);
 }
 
 .hyper-alert-gray {
-  color: #606060;
-  background-color: #efefef;
+  color: var(--hyper-color-gray);
+  background-color: rgba(var(--hyper-color-gray-rgb), 0.25);
 }
 .hyper-alert-gray .hyper-alert-close-btn {
-  color: #606060;
+  color: var(--hyper-color-gray);
 }
 
 .hyper-alert-light {
-  color: #787878;
-  background-color: #fbfbfb;
+  color: var(--hyper-color-light);
+  background-color: rgba(var(--hyper-color-light-rgb), 0.25);
 }
 .hyper-alert-light .hyper-alert-close-btn {
-  color: #787878;
+  color: var(--hyper-color-light);
 }
 
 .hyper-alert-dark {
-  color: #131313;
-  background-color: #c9c9c9;
+  color: var(--hyper-color-dark);
+  background-color: rgba(var(--hyper-color-dark-rgb), 0.25);
 }
 .hyper-alert-dark .hyper-alert-close-btn {
-  color: #131313;
+  color: var(--hyper-color-dark);
 }
 
 @keyframes hyper-alert-flash {
