@@ -15,8 +15,16 @@
 </head>
 
 <body>
-    <div id="hyper-alert" class="hyper-alert hyper-alert-red hyper-alert-flash">
+    <span class="hyper-badge hyper-badge-purple hyper-badge-sharp">hyper-badge-sharp</span>
+    <span class="hyper-badge hyper-badge-yellow">hyper-badge</span>
+    <span class="hyper-badge hyper-badge-pill hyper-badge-magenta">hyper-badge-pill</span>
+    <a class="hyper-badge hyper-badge-cyan">hyper-badge-link</a>
+
+    <br><br>
+
+    <div id="hyper-alert" class="hyper-alert hyper-alert-red hyper-alert-flash hyper-alert-dismissable">
         hyper-alert hyper-alert
+        <button class="hyper-alert-close-btn">&times;</button>
     </div>
 
     <br>
@@ -33,7 +41,7 @@
     <span class="hyper-btn hyper-btn-text hyper-btn-blue">Text Button</span>
     <a href="#" class="hyper-btn hyper-btn-link hyper-btn-blue">Link Button</a>
     <button class="hyper-btn hyper-btn-sharp hyper-btn-blue">Sharp Button</button>
-    <button class="hyper-btn hyper-btn-round hyper-btn-blue">Round Button</button>
+    <button class="hyper-btn hyper-btn-pill hyper-btn-blue">Pill Button</button>
 
     <br><br>
 
@@ -110,14 +118,13 @@
         btn.disable();
 
         const alert = new Alert('#hyper-alert');
+        alert.element.addEventListener('hyper.alert.will.dismiss', (e) => {
+            console.log(e);
+        })
 
-        setInterval(() => {
-            alert.dismiss();
-
-            setTimeout(() => {
-                alert.present();
-            }, 1000);
-        }, 3000);
+        alert.element.addEventListener('hyper.alert.did.dismiss', (e) => {
+            console.log(e);
+        });
     </script>
 </body>
 

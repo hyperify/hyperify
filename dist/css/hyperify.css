@@ -5,24 +5,28 @@
 }
 
 a,
+[type=button],
+[type=reset],
+[type=submit],
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-}
-button:focus {
-  outline: none;
-}
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
 }
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled,
+button:disabled {
+  cursor: not-allowed;
+}
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 a:hover {
@@ -147,23 +151,29 @@ body {
   --hyper-alert-border-radius: 0;
 }
 .hyper-alert.hyper-alert-dismissable {
-  padding-right: 1.75rem;
+  padding-right: 2.5rem;
 }
 .hyper-alert .hyper-alert-close-btn {
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
-  font-size: 1.5rem;
-  padding: 0.25rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  font-size: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
   border: none;
   opacity: 0.75;
   transition: opacity ease-in-out 0.25s;
 }
 .hyper-alert .hyper-alert-close-btn:hover {
   opacity: 1;
+}
+.hyper-alert .hyper-alert-close-btn:focus {
+  outline: none;
 }
 
 .hyper-alert-red {
@@ -297,10 +307,230 @@ body {
     opacity: 1;
   }
 }
+.hyper-badge {
+  --hyper-badge-border-radius: 0.65em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 0.75em;
+  padding: 0.25em 0.5em;
+  white-space: nowrap;
+  font-weight: bold;
+  line-height: 1.25;
+  border-radius: var(--hyper-badge-border-radius);
+  transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
+}
+.hyper-badge.hyper-badge-pill {
+  --hyper-badge-border-radius: 99rem;
+}
+.hyper-badge.hyper-badge-sharp {
+  --hyper-badge-border-radius: 0;
+}
+
+.hyper-badge-red {
+  color: #ffffff;
+  background-color: var(--hyper-color-red);
+}
+
+a.hyper-badge-red:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-red-tint);
+}
+a.hyper-badge-red:active, a.hyper-badge-red.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-red-rgb), 0.5);
+}
+
+.hyper-badge-volcano {
+  color: #ffffff;
+  background-color: var(--hyper-color-volcano);
+}
+
+a.hyper-badge-volcano:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-volcano-tint);
+}
+a.hyper-badge-volcano:active, a.hyper-badge-volcano.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-volcano-rgb), 0.5);
+}
+
+.hyper-badge-orange {
+  color: #ffffff;
+  background-color: var(--hyper-color-orange);
+}
+
+a.hyper-badge-orange:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-orange-tint);
+}
+a.hyper-badge-orange:active, a.hyper-badge-orange.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-orange-rgb), 0.5);
+}
+
+.hyper-badge-gold {
+  color: #ffffff;
+  background-color: var(--hyper-color-gold);
+}
+
+a.hyper-badge-gold:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-gold-tint);
+}
+a.hyper-badge-gold:active, a.hyper-badge-gold.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-gold-rgb), 0.5);
+}
+
+.hyper-badge-yellow {
+  color: #000000;
+  background-color: var(--hyper-color-yellow);
+}
+
+a.hyper-badge-yellow:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-yellow-tint);
+}
+a.hyper-badge-yellow:active, a.hyper-badge-yellow.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-yellow-rgb), 0.5);
+}
+
+.hyper-badge-green {
+  color: #ffffff;
+  background-color: var(--hyper-color-green);
+}
+
+a.hyper-badge-green:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-green-tint);
+}
+a.hyper-badge-green:active, a.hyper-badge-green.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-green-rgb), 0.5);
+}
+
+.hyper-badge-lime {
+  color: #ffffff;
+  background-color: var(--hyper-color-lime);
+}
+
+a.hyper-badge-lime:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-lime-tint);
+}
+a.hyper-badge-lime:active, a.hyper-badge-lime.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-lime-rgb), 0.5);
+}
+
+.hyper-badge-cyan {
+  color: #ffffff;
+  background-color: var(--hyper-color-cyan);
+}
+
+a.hyper-badge-cyan:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-cyan-tint);
+}
+a.hyper-badge-cyan:active, a.hyper-badge-cyan.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-cyan-rgb), 0.5);
+}
+
+.hyper-badge-blue {
+  color: #ffffff;
+  background-color: var(--hyper-color-blue);
+}
+
+a.hyper-badge-blue:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-blue-tint);
+}
+a.hyper-badge-blue:active, a.hyper-badge-blue.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-blue-rgb), 0.5);
+}
+
+.hyper-badge-navy {
+  color: #ffffff;
+  background-color: var(--hyper-color-navy);
+}
+
+a.hyper-badge-navy:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-navy-tint);
+}
+a.hyper-badge-navy:active, a.hyper-badge-navy.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-navy-rgb), 0.5);
+}
+
+.hyper-badge-purple {
+  color: #ffffff;
+  background-color: var(--hyper-color-purple);
+}
+
+a.hyper-badge-purple:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-purple-tint);
+}
+a.hyper-badge-purple:active, a.hyper-badge-purple.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-purple-rgb), 0.5);
+}
+
+.hyper-badge-magenta {
+  color: #ffffff;
+  background-color: var(--hyper-color-magenta);
+}
+
+a.hyper-badge-magenta:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-magenta-tint);
+}
+a.hyper-badge-magenta:active, a.hyper-badge-magenta.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-magenta-rgb), 0.5);
+}
+
+.hyper-badge-gray {
+  color: #000000;
+  background-color: var(--hyper-color-gray);
+}
+
+a.hyper-badge-gray:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-gray-tint);
+}
+a.hyper-badge-gray:active, a.hyper-badge-gray.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-gray-rgb), 0.5);
+}
+
+.hyper-badge-light {
+  color: #000000;
+  background-color: var(--hyper-color-light);
+}
+
+a.hyper-badge-light:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-light-tint);
+}
+a.hyper-badge-light:active, a.hyper-badge-light.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-light-rgb), 0.5);
+}
+
+.hyper-badge-dark {
+  color: #ffffff;
+  background-color: var(--hyper-color-dark);
+}
+
+a.hyper-badge-dark:hover {
+  text-decoration: none;
+  background-color: var(--hyper-color-dark-tint);
+}
+a.hyper-badge-dark:active, a.hyper-badge-dark.active {
+  box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-dark-rgb), 0.5);
+}
+
 .hyper-btn {
   --hyper-btn-border-radius: 0.75rem;
   --hyper-btn-border-width: 0.1rem;
   --hyper-btn-box-shadow-width: 0.2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
   vertical-align: middle;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -309,7 +539,10 @@ body {
   border-radius: var(--hyper-btn-border-radius);
   transition: box-shadow 0.25s ease-in, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
-.hyper-btn:not(.disabled):not(.loading) {
+.hyper-btn:focus {
+  outline: none;
+}
+.hyper-btn:not(:disabled):not(.disabled):not(.loading) {
   cursor: pointer;
 }
 .hyper-btn:disabled, .hyper-btn.disabled, .hyper-btn.loading {
@@ -324,7 +557,7 @@ body {
 .hyper-btn.hyper-btn-sharp {
   --hyper-btn-border-radius: 0;
 }
-.hyper-btn.hyper-btn-round {
+.hyper-btn.hyper-btn-pill {
   --hyper-btn-border-radius: 99rem;
 }
 .hyper-btn.hyper-btn-block {

@@ -1,8 +1,14 @@
+import { px } from './common/constant';
 import { Component } from './hyperify';
 
 export default class Alert extends Component {
-    static readonly SELECTORS = '.hyper-alert';
-    static readonly CLOSE_BTN_SELECTORS = '.hyper-alert-close-btn';
+    static readonly SELECTOR = '.hyper-alert';
+    static readonly CLOSE_BTN_SELECTOR = '.hyper-alert-close-btn';
+
+    static readonly EVENT_WILLDISSMISS = new CustomEvent('hyper.alert.will.dismiss');
+    static readonly EVENT_DIDDISMISS = new CustomEvent('hyper.alert.did.dismiss');
+    static readonly EVENT_WILLPRESENT = new CustomEvent('hyper.alert.will.present');
+    static readonly EVENT_DIDPRESENT = new CustomEvent('hyper.alert.did.present');
 
     constructor(arg: string | HTMLElement) {
         super(arg);
@@ -17,10 +23,11 @@ export default class Alert extends Component {
     }
 }
 
-const px = 'px';
 const rate = 10;
 
 const dismiss = (alert: HTMLElement) => {
+    alert.dispatchEvent(Alert.EVENT_WILLDISSMISS);
+
     const style = window.getComputedStyle(alert, null);
 
     let height = parseInt(style['height']);
@@ -79,12 +86,16 @@ const dismiss = (alert: HTMLElement) => {
         alert.style.paddingTop = null;
         alert.style.paddingBottom = null;
         alert.style.opacity = null;
+
+        alert.dispatchEvent(Alert.EVENT_DIDDISMISS);
     }
 
     window.requestAnimationFrame(render);
 }
 
 const present = (alert: HTMLElement) => {
+    alert.dispatchEvent(Alert.EVENT_WILLPRESENT);
+
     alert.style.display = null;
     const style = window.getComputedStyle(alert, null);
 
@@ -159,17 +170,19 @@ const present = (alert: HTMLElement) => {
         alert.style.paddingTop = null;
         alert.style.paddingBottom = null;
         alert.style.opacity = null;
+
+        alert.dispatchEvent(Alert.EVENT_DIDPRESENT);
     }
 
     window.requestAnimationFrame(render);
 }
 
 window.addEventListener('load', () => {
-    const list = document.querySelectorAll('.hyper-alert-close-btn');
+    const list = document.querySelectorAll(Alert.CLOSE_BTN_SELECTOR);
 
     for (const btn of list) {
         btn.addEventListener('click', () => {
             dismiss(btn.parentElement);
-        }, { once: true });
+        });
     }
 });

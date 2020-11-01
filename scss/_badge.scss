@@ -1,0 +1,42 @@
+.hyper-badge {
+    --hyper-badge-border-radius: 0.65em;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    white-space: nowrap;
+    font-weight: bold;
+    line-height: 1.25;
+    border-radius: var(--hyper-badge-border-radius);
+    transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
+
+    &.hyper-badge-pill {
+        --hyper-badge-border-radius: 99rem;
+    }
+
+    &.hyper-badge-sharp {
+        --hyper-badge-border-radius: 0;
+    }
+}
+
+@each $color-name, $color-map in $colors {
+    .hyper-badge-#{$color-name} {
+        color: #{map-get($color-map, contrast)};
+        background-color: var(--hyper-color-#{$color-name});
+    }
+
+    a.hyper-badge-#{$color-name} {
+        &:hover {
+            text-decoration: none;
+            background-color: var(--hyper-color-#{$color-name}-tint);
+        }
+
+        &:active,
+        &.active {
+            box-shadow: 0 0 0 0.2em rgba(var(--hyper-color-#{$color-name}-rgb), 0.5);
+        }
+    }
+}

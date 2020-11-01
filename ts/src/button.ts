@@ -1,7 +1,7 @@
 import { Component } from './hyperify';
 
 export default class Button extends Component {
-    static readonly SELECTORS = '.hyper-btn';
+    static readonly SELECTOR = '.hyper-btn';
 
     constructor(arg: string | HTMLElement) {
         super(arg);
@@ -38,7 +38,7 @@ interface IButton extends HTMLElement {
 }
 
 window.addEventListener('load', () => {
-    const list = document.querySelectorAll(Button.SELECTORS) as NodeListOf<IButton>;
+    const list = document.querySelectorAll(Button.SELECTOR) as NodeListOf<IButton>;
 
     for (const btn of list) {
         btn.addEventListener('click', () => {

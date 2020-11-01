@@ -18,24 +18,31 @@
     }
 
     &.hyper-alert-dismissable {
-        padding-right: 1.75rem;
+        padding-right: 2.5rem;
     }
 
     .hyper-alert-close-btn {
         position: absolute;
         top: 0;
         right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
-        font-size: 1.5rem;
-        padding: 0.25rem;
-        width: 1.75rem;
-        height: 1.75rem;
+        font-size: 2rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
         border: none;
         opacity: 0.75;
         transition: opacity ease-in-out 0.25s;
 
         &:hover {
             opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
         }
     }
 }

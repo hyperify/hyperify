@@ -1,5 +1,7 @@
 define(['exports'], function (exports) { 'use strict';
 
+    const px = 'px';
+
     class Component {
         constructor(arg) {
             if (typeof arg === 'string') {
@@ -22,11 +24,15 @@ define(['exports'], function (exports) { 'use strict';
             return present(this.element);
         }
     }
-    Alert.SELECTORS = '.hyper-alert';
-    Alert.CLOSE_BTN_SELECTORS = '.hyper-alert-close-btn';
-    const px = 'px';
+    Alert.SELECTOR = '.hyper-alert';
+    Alert.CLOSE_BTN_SELECTOR = '.hyper-alert-close-btn';
+    Alert.EVENT_WILLDISSMISS = new CustomEvent('hyper.alert.will.dismiss');
+    Alert.EVENT_DIDDISMISS = new CustomEvent('hyper.alert.did.dismiss');
+    Alert.EVENT_WILLPRESENT = new CustomEvent('hyper.alert.will.present');
+    Alert.EVENT_DIDPRESENT = new CustomEvent('hyper.alert.did.present');
     const rate = 10;
     const dismiss = (alert) => {
+        alert.dispatchEvent(Alert.EVENT_WILLDISSMISS);
         const style = window.getComputedStyle(alert, null);
         let height = parseInt(style['height']);
         let marginTop = parseInt(style['marginTop']);
@@ -75,10 +81,12 @@ define(['exports'], function (exports) { 'use strict';
             alert.style.paddingTop = null;
             alert.style.paddingBottom = null;
             alert.style.opacity = null;
+            alert.dispatchEvent(Alert.EVENT_DIDDISMISS);
         };
         window.requestAnimationFrame(render);
     };
     const present = (alert) => {
+        alert.dispatchEvent(Alert.EVENT_WILLPRESENT);
         alert.style.display = null;
         const style = window.getComputedStyle(alert, null);
         const _height = parseInt(style['height']);
@@ -141,15 +149,33 @@ define(['exports'], function (exports) { 'use strict';
             alert.style.paddingTop = null;
             alert.style.paddingBottom = null;
             alert.style.opacity = null;
+            alert.dispatchEvent(Alert.EVENT_DIDPRESENT);
         };
         window.requestAnimationFrame(render);
     };
     window.addEventListener('load', () => {
-        const list = document.querySelectorAll('.hyper-alert-close-btn');
+        const list = document.querySelectorAll(Alert.CLOSE_BTN_SELECTOR);
         for (const btn of list) {
             btn.addEventListener('click', () => {
                 dismiss(btn.parentElement);
-            }, { once: true });
+            });
+        }
+    });
+
+    class Badge {
+    }
+    Badge.SELECTOR = '.hyper-badge';
+    window.addEventListener('load', () => {
+        const list = document.querySelectorAll('a' + Badge.SELECTOR);
+        for (const badge of list) {
+            badge.addEventListener('click', () => {
+                badge.activeTimer && clearTimeout(badge.activeTimer);
+                badge.classList.add('active');
+                badge.activeTimer = window.setTimeout(() => {
+                    badge.classList.remove('active');
+                    badge.activeTimer = null;
+                }, 300);
+            });
         }
     });
 
@@ -177,9 +203,9 @@ define(['exports'], function (exports) { 'use strict';
             return this.element.classList.contains('loading');
         }
     }
-    Button.SELECTORS = '.hyper-btn';
+    Button.SELECTOR = '.hyper-btn';
     window.addEventListener('load', () => {
-        const list = document.querySelectorAll(Button.SELECTORS);
+        const list = document.querySelectorAll(Button.SELECTOR);
         for (const btn of list) {
             btn.addEventListener('click', () => {
                 btn.activeTimer && clearTimeout(btn.activeTimer);
@@ -193,6 +219,7 @@ define(['exports'], function (exports) { 'use strict';
     });
 
     exports.Alert = Alert;
+    exports.Badge = Badge;
     exports.Button = Button;
 
     Object.defineProperty(exports, '__esModule', { value: true });
