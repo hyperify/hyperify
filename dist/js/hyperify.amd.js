@@ -208,6 +208,9 @@ define(['exports'], function (exports) { 'use strict';
         const list = document.querySelectorAll(Button.SELECTOR);
         for (const btn of list) {
             btn.addEventListener('click', () => {
+                if (btn.classList.contains('disabled') || btn.classList.contains('loading')) {
+                    return;
+                }
                 btn.activeTimer && clearTimeout(btn.activeTimer);
                 btn.classList.add('active');
                 btn.activeTimer = window.setTimeout(() => {

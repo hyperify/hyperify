@@ -28,9 +28,11 @@ button {
 a {
     cursor: pointer;
     text-decoration: none;
+    color: var(--hyper-color-primary);
 
     &:hover {
         text-decoration: underline;
+        color: var(--hyper-color-primary-tint);
     }
 }
 
@@ -39,4 +41,14 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
+    color: var(--hyper-color-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5rem;
 }

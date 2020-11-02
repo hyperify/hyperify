@@ -81,7 +81,7 @@
         --hyper-btn-border-radius: 1rem;
         --hyper-btn-border-width: 0.125rem;
 
-        padding: 0.425rem 1.125rem;
+        padding: 0.45rem 1.125rem;
         font-size: 1.25rem;
     }
 }
@@ -90,7 +90,7 @@ a.hyper-btn {
     text-decoration: none;
 }
 
-@each $color-name, $color-map in $colors {
+@each $color-name, $color-map in $colors-level {
     .hyper-btn-#{$color-name} {
         color: var(--hyper-color-#{$color-name}-contrast);
         background-color: var(--hyper-color-#{$color-name});
@@ -141,6 +141,10 @@ a.hyper-btn {
                 }
             }
         }
+    }
+
+    a.hyper-btn-#{$color-name}:hover {
+        color: var(--hyper-color-#{$color-name}-contrast);
     }
 }
 

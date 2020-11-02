@@ -1,3 +1,5 @@
+@import "variables";
+
 .hyper-badge {
     --hyper-badge-border-radius: 0.65em;
 
@@ -22,7 +24,7 @@
     }
 }
 
-@each $color-name, $color-map in $colors {
+@each $color-name, $color-map in $colors-level {
     .hyper-badge-#{$color-name} {
         color: #{map-get($color-map, contrast)};
         background-color: var(--hyper-color-#{$color-name});
@@ -30,6 +32,7 @@
 
     a.hyper-badge-#{$color-name} {
         &:hover {
+            color: #{map-get($color-map, contrast)};
             text-decoration: none;
             background-color: var(--hyper-color-#{$color-name}-tint);
         }

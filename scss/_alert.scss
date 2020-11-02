@@ -47,13 +47,13 @@
     }
 }
 
-@each $color-name, $color-map in $colors {
+@each $color-name, $color-map in $colors-level {
     .hyper-alert-#{$color-name} {
-        color: var(--hyper-color-#{$color-name});
+        color: var(--hyper-color-#{$color-name}-shade);
         background-color: rgba(var(--hyper-color-#{$color-name}-rgb), 0.25);
 
         .hyper-alert-close-btn {
-            color: var(--hyper-color-#{$color-name});
+            color: var(--hyper-color-#{$color-name}-shade);
         }
     }
 }

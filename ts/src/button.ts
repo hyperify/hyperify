@@ -42,6 +42,10 @@ window.addEventListener('load', () => {
 
     for (const btn of list) {
         btn.addEventListener('click', () => {
+            if (btn.classList.contains('disabled') || btn.classList.contains('loading')) {
+                return;
+            }
+
             btn.activeTimer && clearTimeout(btn.activeTimer);
             btn.classList.add('active');
 

@@ -1,0 +1,16 @@
+.hyper-breadcrumb {
+    --hyper-breadcrumb-separator: "/";
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hyper-breadcrumb-item {
+    &:not(:first-child)::before {
+        content: var(--hyper-breadcrumb-separator);
+        padding: 0 0.5rem;
+        color: var(--hyper-color-medium);
+    }
+}

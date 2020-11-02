@@ -19,95 +19,140 @@ $dark: #262626;
 $white: #fff;
 $black: #000;
 
-$colors: (
+$colors-level: (
+    primary: (
+        base: $cyan,
+        shade: get-color-shade($cyan),
+        tint: get-color-tint($cyan),
+        contrast: #fff,
+    ),
+    secondary: (
+        base: $lime,
+        shade: get-color-shade($lime),
+        tint: get-color-tint($lime),
+        contrast: #fff,
+    ),
+    success: (
+        base: $green,
+        shade: get-color-shade($green),
+        tint: get-color-tint($green),
+        contrast: #fff,
+    ),
+    info: (
+        base: $blue,
+        shade: get-color-shade($blue),
+        tint: get-color-tint($blue),
+        contrast: #fff,
+    ),
+    warning: (
+        base: $yellow,
+        shade: get-color-shade($yellow),
+        tint: get-color-tint($yellow),
+        contrast: #000,
+    ),
+    danger: (
+        base: $red,
+        shade: get-color-shade($red),
+        tint: get-color-tint($red),
+        contrast: #fff,
+    ),
+    dark: (
+        base: $dark,
+        shade: get-color-shade($dark),
+        tint: get-color-tint($dark),
+        contrast: #fff,
+    ),
+    medium: (
+        base: $gray,
+        shade: get-color-shade($gray),
+        tint: get-color-tint($gray),
+        contrast: #fff,
+    ),
+    light: (
+        base: $light,
+        shade: get-color-shade($light),
+        tint: get-color-tint($light),
+        contrast: #000,
+    ),
+);
+
+$colors-all: (
     "red": (
         base: $red,
         shade: get-color-shade($red),
         tint: get-color-tint($red),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "volcano": (
         base: $volcano,
         shade: get-color-shade($volcano),
         tint: get-color-tint($volcano),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "orange": (
         base: $orange,
         shade: get-color-shade($orange),
         tint: get-color-tint($orange),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "gold": (
         base: $gold,
         shade: get-color-shade($gold),
         tint: get-color-tint($gold),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "yellow": (
         base: $yellow,
         shade: get-color-shade($yellow),
         tint: get-color-tint($yellow),
-        contrast: #000000,
+        contrast: #000,
     ),
     "green": (
         base: $green,
         shade: get-color-shade($green),
         tint: get-color-tint($green),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "lime": (
         base: $lime,
         shade: get-color-shade($lime),
         tint: get-color-tint($lime),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "cyan": (
         base: $cyan,
         shade: get-color-shade($cyan),
         tint: get-color-tint($cyan),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "blue": (
         base: $blue,
         shade: get-color-shade($blue),
         tint: get-color-tint($blue),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "navy": (
         base: $navy,
         shade: get-color-shade($navy),
         tint: get-color-tint($navy),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "purple": (
         base: $purple,
         shade: get-color-shade($purple),
         tint: get-color-tint($purple),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "magenta": (
         base: $magenta,
         shade: get-color-shade($magenta),
         tint: get-color-tint($magenta),
-        contrast: #ffffff,
+        contrast: #fff,
     ),
     "gray": (
         base: $gray,
         shade: get-color-shade($gray),
         tint: get-color-tint($gray),
-        contrast: #000000,
-    ),
-    "light": (
-        base: $light,
-        shade: get-color-shade($light),
-        tint: get-color-tint($light),
-        contrast: #000000,
-    ),
-    "dark": (
-        base: $dark,
-        shade: get-color-shade($dark),
-        tint: get-color-tint($dark),
-        contrast: #ffffff,
+        contrast: #000,
     ),
 );

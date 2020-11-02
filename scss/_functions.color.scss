@@ -5,7 +5,7 @@
 
 // 将颜色与白色混合以创建其色调
 @function get-color-tint($color) {
-    @return mix(#fff, $color, 10%);
+    @return mix(#fff, $color, 11%);
 }
 
 // 将颜色转换为逗号分隔的rgb

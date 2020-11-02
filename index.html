@@ -29,124 +29,137 @@
 </head>
 
 <body>
-    <main class="hyper-row">
-        <div class="hyper-col-4">hyper-col-4</div>
-        <div class="hyper-col-4">hyper-col-4</div>
-        <div class="hyper-col-4">hyper-col-4</div>
-        <div class="hyper-col-4">hyper-col-4</div>
-        <div class="hyper-col-4">hyper-col-4</div>
-        <div class="hyper-col-4">hyper-col-4</div>
+    <div class="hyper-breadcrumb">
+        <span class="hyper-breadcrumb-item">A</span>
+        <span class="hyper-breadcrumb-item">B</span>
+        <span class="hyper-breadcrumb-item">C</span>
+    </div>
 
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
-        <div class="hyper-col-2">hyper-col-2</div>
+    <ol class="hyper-breadcrumb">
+        <li class="hyper-breadcrumb-item"><a href="#">One</a></li>
+        <li class="hyper-breadcrumb-item"><a href="#">Two</a></li>
+        <li class="hyper-breadcrumb-item active">Three</li>
+    </ol>
+
+
+    <br>
+
+    <main class="hyper-row">
+        <div class="hyper-col-4">col-4</div>
+        <div class="hyper-col-4">col-4</div>
+        <div class="hyper-col-4">col-4</div>
+        <div class="hyper-col-4">col-4</div>
+        <div class="hyper-col-4">col-4</div>
+        <div class="hyper-col-4">col-4</div>
+
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
+        <div class="hyper-col-2">col-2</div>
     </main>
 
+    <br>
 
-    <span class="hyper-badge hyper-badge-purple hyper-badge-sharp">hyper-badge-sharp</span>
-    <span class="hyper-badge hyper-badge-yellow">hyper-badge</span>
-    <span class="hyper-badge hyper-badge-pill hyper-badge-magenta">hyper-badge-pill</span>
-    <a class="hyper-badge hyper-badge-cyan">hyper-badge-link</a>
+    <span class="hyper-badge hyper-badge-primary hyper-badge-sharp">hyper-badge-sharp</span>
+    <span class="hyper-badge hyper-badge-warning">hyper-badge</span>
+    <span class="hyper-badge hyper-badge-pill hyper-badge-success">hyper-badge-pill</span>
+    <a class="hyper-badge hyper-badge-primary">hyper-badge-link</a>
 
     <br><br>
 
-    <div id="hyper-alert" class="hyper-alert hyper-alert-red hyper-alert-flash hyper-alert-dismissable">
-        <h2>hyper-alert</h2>
+    <div id="hyper-alert" class="hyper-alert hyper-alert-danger hyper-alert-flash hyper-alert-dismissable">
+        <h2>hyper-alert <span class="hyper-badge hyper-badge-danger">hyper-badge</span></h2>
         hyper-alert hyper-alert
         <button class="hyper-alert-close-btn">&times;</button>
     </div>
 
     <br>
 
-    <div class="hyper-alert hyper-alert-lime hyper-alert-dismissable">
+    <div class="hyper-alert hyper-alert-success hyper-alert-dismissable">
         hyper-alert hyper-alert
         <button class="hyper-alert-close-btn">&times;</button>
     </div>
 
     <br>
 
-    <input class="hyper-btn hyper-btn-blue" type="button" value="Input Button">
-    <a href="#" class="hyper-btn hyper-btn-blue">Link Button</a>
-    <span class="hyper-btn hyper-btn-text hyper-btn-blue">Text Button</span>
-    <a href="#" class="hyper-btn hyper-btn-link hyper-btn-blue">Link Button</a>
-    <button class="hyper-btn hyper-btn-sharp hyper-btn-blue">Sharp Button</button>
-    <button class="hyper-btn hyper-btn-pill hyper-btn-blue">Pill Button</button>
+    <input class="hyper-btn hyper-btn-primary" type="button" value="Input Button">
+    <a href="#" class="hyper-btn hyper-btn-primary">Link Button</a>
+    <span class="hyper-btn hyper-btn-text hyper-btn-primary">Text Button</span>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-sm hyper-btn-blue">Small Button</button>
-    <button class="hyper-btn hyper-btn-blue">Default Button</button>
-    <button class="hyper-btn hyper-btn-lg hyper-btn-blue">Large Button</button>
+    <a href="#" class="hyper-btn hyper-btn-link hyper-btn-primary">Link Button</a>
+    <button class="hyper-btn hyper-btn-sharp hyper-btn-primary">Sharp Button</button>
+    <button class="hyper-btn hyper-btn-pill hyper-btn-primary">Pill Button</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-outline hyper-btn-blue">Outline Button</button>
-    <button class="hyper-btn hyper-btn-dashed hyper-btn-blue">Dashed Button</button>
+    <button class="hyper-btn hyper-btn-sm hyper-btn-primary">Small Button</button>
+    <button class="hyper-btn hyper-btn-primary">Default Button</button>
+    <button class="hyper-btn hyper-btn-lg hyper-btn-primary">Large Button</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-block hyper-btn-blue">Block Button</button>
+    <button class="hyper-btn hyper-btn-outline hyper-btn-primary">Outline Button</button>
+    <button class="hyper-btn hyper-btn-dashed hyper-btn-primary">Dashed Button</button>
+
+    <br><br>
+
+    <button class="hyper-btn hyper-btn-block hyper-btn-primary">Block Button</button>
 
     <br>
 
-    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue">Disabled Button</button>
-    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-blue loading">Loading Button</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary">Disabled Button</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary loading">Loading Button</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-red">Red Button</button>
-    <button class="hyper-btn hyper-btn-volcano">Volcano Button</button>
-    <button class="hyper-btn hyper-btn-orange">Orange Button</button>
-    <button class="hyper-btn hyper-btn-gold">Gold Button</button>
-    <button class="hyper-btn hyper-btn-yellow">Yellow Button</button>
+    <button class="hyper-btn hyper-btn-primary">Primary Button</button>
+    <button class="hyper-btn hyper-btn-secondary">Secondary Button</button>
+    <button class="hyper-btn hyper-btn-success">Success Button</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-green">Green Button</button>
-    <button class="hyper-btn hyper-btn-lime">Lime Button</button>
-    <button class="hyper-btn hyper-btn-cyan">Cyan Button</button>
-    <button class="hyper-btn hyper-btn-blue">Blue Button</button>
-    <button class="hyper-btn hyper-btn-navy">Navy Button</button>
+    <button class="hyper-btn hyper-btn-info">Info Button</button>
+    <button class="hyper-btn hyper-btn-warning">Warning Button</button>
+    <button class="hyper-btn hyper-btn-danger">Danger Button</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-purple">Purple Button</button>
-    <button class="hyper-btn hyper-btn-magenta">Magenta Button</button>
     <button class="hyper-btn hyper-btn-dark">Dark Button</button>
-    <button class="hyper-btn hyper-btn-gray">Gray Button</button>
+    <button class="hyper-btn hyper-btn-medium">Medium Button</button>
     <button class="hyper-btn hyper-btn-light">Light Button</button>
 
     <br><br>
 
     <div class="hyper-btn-group">
-        <button class="hyper-btn hyper-btn-blue">Hyper</button>
-        <button class="hyper-btn hyper-btn-blue">Button</button>
-        <button class="hyper-btn hyper-btn-blue">Group</button>
+        <button class="hyper-btn hyper-btn-warning">Hyper</button>
+        <button class="hyper-btn hyper-btn-warning">Button</button>
+        <button class="hyper-btn hyper-btn-warning">Group</button>
     </div>
 
     <br><br>
 
     <div class="hyper-btn-group">
-        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Hyper</button>
-        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Button</button>
-        <button class="hyper-btn hyper-btn-blue hyper-btn-outline hyper-btn-sharp">Group</button>
+        <button class="hyper-btn hyper-btn-success hyper-btn-outline hyper-btn-sharp">Hyper</button>
+        <button class="hyper-btn hyper-btn-success hyper-btn-outline hyper-btn-sharp">Button</button>
+        <button class="hyper-btn hyper-btn-success hyper-btn-outline hyper-btn-sharp">Group</button>
     </div>
 
     <br><br>
 
     <div class="hyper-btn-group">
-        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Hyper</button>
-        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Button</button>
-        <button class="hyper-btn hyper-btn-blue hyper-btn-dashed">Group</button>
+        <button class="hyper-btn hyper-btn-info hyper-btn-dashed">Hyper</button>
+        <button class="hyper-btn hyper-btn-info hyper-btn-dashed">Button</button>
+        <button class="hyper-btn hyper-btn-info hyper-btn-dashed">Group</button>
     </div>
 
     <script type="module">
