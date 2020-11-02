@@ -26,13 +26,13 @@
 
 @each $color-name, $color-map in $colors-level {
     .hyper-badge-#{$color-name} {
-        color: #{map-get($color-map, contrast)};
+        color: var(--hyper-color-#{$color-name}-contrast);
         background-color: var(--hyper-color-#{$color-name});
     }
 
     a.hyper-badge-#{$color-name} {
         &:hover {
-            color: #{map-get($color-map, contrast)};
+            color: var(--hyper-color-#{$color-name}-contrast);
             text-decoration: none;
             background-color: var(--hyper-color-#{$color-name}-tint);
         }

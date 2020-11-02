@@ -335,12 +335,12 @@ h6 {
 }
 
 .hyper-badge-primary {
-  color: #fff;
+  color: var(--hyper-color-primary-contrast);
   background-color: var(--hyper-color-primary);
 }
 
 a.hyper-badge-primary:hover {
-  color: #fff;
+  color: var(--hyper-color-primary-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-primary-tint);
 }
@@ -349,12 +349,12 @@ a.hyper-badge-primary:active, a.hyper-badge-primary.active {
 }
 
 .hyper-badge-secondary {
-  color: #fff;
+  color: var(--hyper-color-secondary-contrast);
   background-color: var(--hyper-color-secondary);
 }
 
 a.hyper-badge-secondary:hover {
-  color: #fff;
+  color: var(--hyper-color-secondary-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-secondary-tint);
 }
@@ -363,12 +363,12 @@ a.hyper-badge-secondary:active, a.hyper-badge-secondary.active {
 }
 
 .hyper-badge-success {
-  color: #fff;
+  color: var(--hyper-color-success-contrast);
   background-color: var(--hyper-color-success);
 }
 
 a.hyper-badge-success:hover {
-  color: #fff;
+  color: var(--hyper-color-success-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-success-tint);
 }
@@ -377,12 +377,12 @@ a.hyper-badge-success:active, a.hyper-badge-success.active {
 }
 
 .hyper-badge-info {
-  color: #fff;
+  color: var(--hyper-color-info-contrast);
   background-color: var(--hyper-color-info);
 }
 
 a.hyper-badge-info:hover {
-  color: #fff;
+  color: var(--hyper-color-info-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-info-tint);
 }
@@ -391,12 +391,12 @@ a.hyper-badge-info:active, a.hyper-badge-info.active {
 }
 
 .hyper-badge-warning {
-  color: #000;
+  color: var(--hyper-color-warning-contrast);
   background-color: var(--hyper-color-warning);
 }
 
 a.hyper-badge-warning:hover {
-  color: #000;
+  color: var(--hyper-color-warning-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-warning-tint);
 }
@@ -405,12 +405,12 @@ a.hyper-badge-warning:active, a.hyper-badge-warning.active {
 }
 
 .hyper-badge-danger {
-  color: #fff;
+  color: var(--hyper-color-danger-contrast);
   background-color: var(--hyper-color-danger);
 }
 
 a.hyper-badge-danger:hover {
-  color: #fff;
+  color: var(--hyper-color-danger-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-danger-tint);
 }
@@ -419,12 +419,12 @@ a.hyper-badge-danger:active, a.hyper-badge-danger.active {
 }
 
 .hyper-badge-dark {
-  color: #fff;
+  color: var(--hyper-color-dark-contrast);
   background-color: var(--hyper-color-dark);
 }
 
 a.hyper-badge-dark:hover {
-  color: #fff;
+  color: var(--hyper-color-dark-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-dark-tint);
 }
@@ -433,12 +433,12 @@ a.hyper-badge-dark:active, a.hyper-badge-dark.active {
 }
 
 .hyper-badge-medium {
-  color: #fff;
+  color: var(--hyper-color-medium-contrast);
   background-color: var(--hyper-color-medium);
 }
 
 a.hyper-badge-medium:hover {
-  color: #fff;
+  color: var(--hyper-color-medium-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-medium-tint);
 }
@@ -447,12 +447,12 @@ a.hyper-badge-medium:active, a.hyper-badge-medium.active {
 }
 
 .hyper-badge-light {
-  color: #000;
+  color: var(--hyper-color-light-contrast);
   background-color: var(--hyper-color-light);
 }
 
 a.hyper-badge-light:hover {
-  color: #000;
+  color: var(--hyper-color-light-contrast);
   text-decoration: none;
   background-color: var(--hyper-color-light-tint);
 }
