@@ -8,9 +8,18 @@
 }
 
 .hyper-breadcrumb-item {
+    &.active {
+        color: var(--hyper-color-dark);
+        pointer-events: none;
+
+        * {
+            color: var(--hyper-color-dark);
+        }
+    }
+
     &:not(:first-child)::before {
         content: var(--hyper-breadcrumb-separator);
-        padding: 0 0.5rem;
+        padding: 0 0.5em;
         color: var(--hyper-color-medium);
     }
 }

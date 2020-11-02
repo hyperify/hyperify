@@ -469,9 +469,16 @@ a.hyper-badge-light:active, a.hyper-badge-light.active {
   padding: 0;
 }
 
+.hyper-breadcrumb-item.active {
+  color: var(--hyper-color-dark);
+  pointer-events: none;
+}
+.hyper-breadcrumb-item.active * {
+  color: var(--hyper-color-dark);
+}
 .hyper-breadcrumb-item:not(:first-child)::before {
   content: var(--hyper-breadcrumb-separator);
-  padding: 0 0.5rem;
+  padding: 0 0.5em;
   color: var(--hyper-color-medium);
 }
 
