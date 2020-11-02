@@ -51,6 +51,16 @@ h6 {
   margin: 0 0 0.5rem;
 }
 
+hr {
+  margin: 0.75rem 0;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+hr:not([size]) {
+  height: 0.075rem;
+}
+
 :root {
   --hyper-color-white: #fff;
   --hyper-color-white-rgb: 255, 255, 255;
@@ -219,7 +229,7 @@ h6 {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  border: none;
+  border: 0;
   opacity: 0.75;
   transition: opacity ease-in-out 0.25s;
 }
@@ -234,6 +244,13 @@ h6 {
   color: var(--hyper-color-primary-shade);
   background-color: rgba(var(--hyper-color-primary-rgb), 0.25);
 }
+.hyper-alert-primary .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-primary .hyper-alert-link:hover {
+  text-decoration: underline;
+}
 .hyper-alert-primary .hyper-alert-close-btn {
   color: var(--hyper-color-primary-shade);
 }
@@ -241,6 +258,13 @@ h6 {
 .hyper-alert-secondary {
   color: var(--hyper-color-secondary-shade);
   background-color: rgba(var(--hyper-color-secondary-rgb), 0.25);
+}
+.hyper-alert-secondary .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-secondary .hyper-alert-link:hover {
+  text-decoration: underline;
 }
 .hyper-alert-secondary .hyper-alert-close-btn {
   color: var(--hyper-color-secondary-shade);
@@ -250,6 +274,13 @@ h6 {
   color: var(--hyper-color-success-shade);
   background-color: rgba(var(--hyper-color-success-rgb), 0.25);
 }
+.hyper-alert-success .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-success .hyper-alert-link:hover {
+  text-decoration: underline;
+}
 .hyper-alert-success .hyper-alert-close-btn {
   color: var(--hyper-color-success-shade);
 }
@@ -257,6 +288,13 @@ h6 {
 .hyper-alert-info {
   color: var(--hyper-color-info-shade);
   background-color: rgba(var(--hyper-color-info-rgb), 0.25);
+}
+.hyper-alert-info .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-info .hyper-alert-link:hover {
+  text-decoration: underline;
 }
 .hyper-alert-info .hyper-alert-close-btn {
   color: var(--hyper-color-info-shade);
@@ -266,6 +304,13 @@ h6 {
   color: var(--hyper-color-warning-shade);
   background-color: rgba(var(--hyper-color-warning-rgb), 0.25);
 }
+.hyper-alert-warning .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-warning .hyper-alert-link:hover {
+  text-decoration: underline;
+}
 .hyper-alert-warning .hyper-alert-close-btn {
   color: var(--hyper-color-warning-shade);
 }
@@ -273,6 +318,13 @@ h6 {
 .hyper-alert-danger {
   color: var(--hyper-color-danger-shade);
   background-color: rgba(var(--hyper-color-danger-rgb), 0.25);
+}
+.hyper-alert-danger .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-danger .hyper-alert-link:hover {
+  text-decoration: underline;
 }
 .hyper-alert-danger .hyper-alert-close-btn {
   color: var(--hyper-color-danger-shade);
@@ -282,6 +334,13 @@ h6 {
   color: var(--hyper-color-dark-shade);
   background-color: rgba(var(--hyper-color-dark-rgb), 0.25);
 }
+.hyper-alert-dark .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-dark .hyper-alert-link:hover {
+  text-decoration: underline;
+}
 .hyper-alert-dark .hyper-alert-close-btn {
   color: var(--hyper-color-dark-shade);
 }
@@ -290,6 +349,13 @@ h6 {
   color: var(--hyper-color-medium-shade);
   background-color: rgba(var(--hyper-color-medium-rgb), 0.25);
 }
+.hyper-alert-medium .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-medium .hyper-alert-link:hover {
+  text-decoration: underline;
+}
 .hyper-alert-medium .hyper-alert-close-btn {
   color: var(--hyper-color-medium-shade);
 }
@@ -297,6 +363,13 @@ h6 {
 .hyper-alert-light {
   color: var(--hyper-color-light-shade);
   background-color: rgba(var(--hyper-color-light-rgb), 0.25);
+}
+.hyper-alert-light .hyper-alert-link {
+  color: currentColor;
+  font-weight: bold;
+}
+.hyper-alert-light .hyper-alert-link:hover {
+  text-decoration: underline;
 }
 .hyper-alert-light .hyper-alert-close-btn {
   color: var(--hyper-color-light-shade);
@@ -326,6 +399,9 @@ h6 {
   line-height: 1.25;
   border-radius: var(--hyper-badge-border-radius);
   transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
+}
+.hyper-badge.active, .hyper-badge:active, .hyper-badge:focus {
+  z-index: 1;
 }
 .hyper-badge.hyper-badge-round {
   --hyper-badge-border-radius: 99rem;
@@ -500,6 +576,9 @@ a.hyper-badge-light:active, a.hyper-badge-light.active {
 }
 .hyper-btn:focus {
   outline: none;
+}
+.hyper-btn.active, .hyper-btn:active, .hyper-btn:focus {
+  z-index: 1;
 }
 .hyper-btn:not(:disabled):not(.disabled):not(.loading) {
   cursor: pointer;

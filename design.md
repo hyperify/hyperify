@@ -5,6 +5,8 @@
 - 组件的CSS类名必须带有 `hyper` 前缀
 - 组件最好可以提供三种版本，分别是原始版（hyper-组件名），直角版（hyper-组件名-sharp），大圆角版（hyper-组件名-round）。参考Button组件
 - 原始版的组件圆角多大合适？达到大圆角，又不完全圆的那种效果（参考Button组件）
+- 擅用 `currentColor` CSS3关键字
+- 去除边框，使用 `border: 0` 而不是 `border: none`（尽量少写点字）
 
 ## 颜色介绍
 示例：

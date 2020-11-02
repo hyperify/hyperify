@@ -52,3 +52,14 @@ h5,
 h6 {
     margin: 0 0 0.5rem;
 }
+
+hr {
+    margin: 0.75rem 0;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.25;
+
+    &:not([size]) {
+        height: 0.075rem;
+    }
+}

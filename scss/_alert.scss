@@ -33,7 +33,7 @@
         width: 2.25rem;
         height: 2.25rem;
         padding: 0;
-        border: none;
+        border: 0;
         opacity: 0.75;
         transition: opacity ease-in-out 0.25s;
 
@@ -51,6 +51,15 @@
     .hyper-alert-#{$color-name} {
         color: var(--hyper-color-#{$color-name}-shade);
         background-color: rgba(var(--hyper-color-#{$color-name}-rgb), 0.25);
+
+        .hyper-alert-link {
+            color: currentColor;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
         .hyper-alert-close-btn {
             color: var(--hyper-color-#{$color-name}-shade);

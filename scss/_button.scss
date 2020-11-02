@@ -21,6 +21,12 @@
         outline: none;
     }
 
+    &.active,
+    &:active,
+    &:focus {
+        z-index: 1;
+    }
+
     &:not(:disabled):not(.disabled):not(.loading) {
         cursor: pointer;
     }
