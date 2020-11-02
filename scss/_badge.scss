@@ -15,7 +15,7 @@
     border-radius: var(--hyper-badge-border-radius);
     transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
 
-    &.hyper-badge-pill {
+    &.hyper-badge-round {
         --hyper-badge-border-radius: 99rem;
     }
 

@@ -327,7 +327,7 @@ h6 {
   border-radius: var(--hyper-badge-border-radius);
   transition: background-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
 }
-.hyper-badge.hyper-badge-pill {
+.hyper-badge.hyper-badge-round {
   --hyper-badge-border-radius: 99rem;
 }
 .hyper-badge.hyper-badge-sharp {
@@ -516,7 +516,7 @@ a.hyper-badge-light:active, a.hyper-badge-light.active {
 .hyper-btn.hyper-btn-sharp {
   --hyper-btn-border-radius: 0;
 }
-.hyper-btn.hyper-btn-pill {
+.hyper-btn.hyper-btn-round {
   --hyper-btn-border-radius: 99rem;
 }
 .hyper-btn.hyper-btn-block {
