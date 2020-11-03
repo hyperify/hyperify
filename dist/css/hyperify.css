@@ -215,7 +215,7 @@ hr:not([size]) {
   --hyper-alert-border-radius: 0;
 }
 .hyper-alert.hyper-alert-dismissable {
-  padding-right: 2.5rem;
+  padding-right: 2.25rem;
 }
 .hyper-alert .hyper-alert-close-btn {
   position: absolute;
@@ -403,7 +403,7 @@ hr:not([size]) {
 .hyper-badge.active, .hyper-badge:active, .hyper-badge:focus {
   z-index: 1;
 }
-.hyper-badge.hyper-badge-round {
+.hyper-badge.hyper-badge-pill {
   --hyper-badge-border-radius: 99rem;
 }
 .hyper-badge.hyper-badge-sharp {
@@ -554,7 +554,7 @@ a.hyper-badge-light:active, a.hyper-badge-light.active {
 }
 .hyper-breadcrumb-item:not(:first-child)::before {
   content: var(--hyper-breadcrumb-separator);
-  padding: 0 0.5em;
+  padding: 0 0.375em;
   color: var(--hyper-color-medium);
 }
 
@@ -595,7 +595,7 @@ a.hyper-badge-light:active, a.hyper-badge-light.active {
 .hyper-btn.hyper-btn-sharp {
   --hyper-btn-border-radius: 0;
 }
-.hyper-btn.hyper-btn-round {
+.hyper-btn.hyper-btn-pill {
   --hyper-btn-border-radius: 99rem;
 }
 .hyper-btn.hyper-btn-block {

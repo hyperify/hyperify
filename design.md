@@ -3,8 +3,8 @@
 - 灵活使用 `%` ， `vh` ， `vw` ， `em` 等单位
 - 组件的颜色需使用 `$colors-level` 内定义的颜色
 - 组件的CSS类名必须带有 `hyper` 前缀
-- 组件最好可以提供三种版本，分别是原始版（hyper-组件名），直角版（hyper-组件名-sharp），大圆角版（hyper-组件名-round）。参考Button组件
-- 原始版的组件圆角多大合适？达到大圆角，又不完全圆的那种效果（参考Button组件）
+- 组件最好可以提供两种版本，分别是原始版（hyper-组件名），直角版（hyper-组件名-sharp），部分组件还可以提供胶囊版（hyper-组件名-pill）。参考Button组件
+- 原始版的组件圆角多大合适？一般为 `0.75rem` ，达到大圆角，又不完全圆的那种效果（参考Button组件）
 - 擅用 `currentColor` CSS3关键字
 - 去除边框，使用 `border: 0` 而不是 `border: none`（尽量少写点字）
 

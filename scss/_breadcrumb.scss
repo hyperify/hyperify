@@ -19,7 +19,7 @@
 
     &:not(:first-child)::before {
         content: var(--hyper-breadcrumb-separator);
-        padding: 0 0.5em;
+        padding: 0 0.375em;
         color: var(--hyper-color-medium);
     }
 }

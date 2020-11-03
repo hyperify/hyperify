@@ -70,13 +70,13 @@
 
     <span class="hyper-badge hyper-badge-primary hyper-badge-sharp">hyper-badge-sharp</span>
     <span class="hyper-badge hyper-badge-warning">hyper-badge</span>
-    <span class="hyper-badge hyper-badge-round hyper-badge-success">hyper-badge-round</span>
+    <span class="hyper-badge hyper-badge-pill hyper-badge-success">hyper-badge-pill</span>
     <a class="hyper-badge hyper-badge-primary">hyper-badge-link</a>
 
     <br><br>
 
     <div id="hyper-alert" class="hyper-alert hyper-alert-danger hyper-alert-flash hyper-alert-dismissable">
-        <h2>hyper-alert <span class="hyper-badge hyper-badge-danger">hyper-badge</span></h2>
+        <h2><span class="hyper-badge hyper-badge-danger">hyper-badge</span> hyper-alert</h2>
         <hr>
         hyper-alert hyper-alert
         <button class="hyper-alert-close-btn">&times;</button>
@@ -91,59 +91,59 @@
 
     <br>
 
-    <input class="hyper-btn hyper-btn-primary" type="button" value="Input Button">
-    <a href="#" class="hyper-btn hyper-btn-primary">Link Button</a>
-    <span class="hyper-btn hyper-btn-text hyper-btn-primary">Text Button</span>
+    <input class="hyper-btn hyper-btn-primary" type="button" value="Input">
+    <a href="#" class="hyper-btn hyper-btn-primary">Link</a>
+    <span class="hyper-btn hyper-btn-text hyper-btn-primary">Text</span>
 
     <br><br>
 
-    <a href="#" class="hyper-btn hyper-btn-link hyper-btn-primary">Link Button</a>
-    <button class="hyper-btn hyper-btn-sharp hyper-btn-primary">Sharp Button</button>
-    <button class="hyper-btn hyper-btn-round hyper-btn-primary">round Button</button>
+    <a href="#" class="hyper-btn hyper-btn-link hyper-btn-primary">Link</a>
+    <button class="hyper-btn hyper-btn-sharp hyper-btn-primary">Sharp</button>
+    <button class="hyper-btn hyper-btn-pill hyper-btn-primary">Pill</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-sm hyper-btn-primary">Small Button</button>
-    <button class="hyper-btn hyper-btn-primary">Default Button</button>
-    <button class="hyper-btn hyper-btn-lg hyper-btn-primary">Large Button</button>
+    <button class="hyper-btn hyper-btn-sm hyper-btn-primary">Small</button>
+    <button class="hyper-btn hyper-btn-primary">Default</button>
+    <button class="hyper-btn hyper-btn-lg hyper-btn-primary">Large</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-outline hyper-btn-primary">Outline Button</button>
-    <button class="hyper-btn hyper-btn-dashed hyper-btn-primary">Dashed Button</button>
+    <button class="hyper-btn hyper-btn-outline hyper-btn-primary">Outline</button>
+    <button class="hyper-btn hyper-btn-dashed hyper-btn-primary">Dashed</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-block hyper-btn-primary">Block Button</button>
+    <button class="hyper-btn hyper-btn-block hyper-btn-primary">Block</button>
 
     <br>
 
-    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary">Disabled Button</button>
-    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary loading">Loading Button</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary">Disabled</button>
+    <button id="disabled-btn" class="hyper-btn hyper-btn-sharp hyper-btn-primary loading">Loading</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-primary">Primary Button</button>
-    <button class="hyper-btn hyper-btn-secondary">Secondary Button</button>
-    <button class="hyper-btn hyper-btn-success">Success Button</button>
+    <button class="hyper-btn hyper-btn-primary">Primary</button>
+    <button class="hyper-btn hyper-btn-secondary">Secondary</button>
+    <button class="hyper-btn hyper-btn-success">Success</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-info">Info Button</button>
-    <button class="hyper-btn hyper-btn-warning">Warning Button</button>
-    <button class="hyper-btn hyper-btn-danger">Danger Button</button>
+    <button class="hyper-btn hyper-btn-info">Info</button>
+    <button class="hyper-btn hyper-btn-warning">Warning</button>
+    <button class="hyper-btn hyper-btn-danger">Danger</button>
 
     <br><br>
 
-    <button class="hyper-btn hyper-btn-dark">Dark Button</button>
-    <button class="hyper-btn hyper-btn-medium">Medium Button</button>
-    <button class="hyper-btn hyper-btn-light">Light Button</button>
+    <button class="hyper-btn hyper-btn-dark">Dark</button>
+    <button class="hyper-btn hyper-btn-medium">Medium</button>
+    <button class="hyper-btn hyper-btn-light">Light</button>
 
     <br><br>
 
     <div class="hyper-btn-group">
         <button class="hyper-btn hyper-btn-warning">Hyper</button>
-        <button class="hyper-btn hyper-btn-danger">Button</button>
+        <button class="hyper-btn hyper-btn-warning">Button</button>
         <button class="hyper-btn hyper-btn-warning">Group</button>
     </div>
 
@@ -170,11 +170,11 @@
         btn.disable();
 
         const alert = new Alert('#hyper-alert');
-        alert.element.addEventListener('hyper.alert.will.dismiss', (e) => {
+        alert.element.addEventListener('hyper.alert.will.dismiss', e => {
             console.log(e);
         })
 
-        alert.element.addEventListener('hyper.alert.did.dismiss', (e) => {
+        alert.element.addEventListener('hyper.alert.did.dismiss', e => {
             console.log(e);
         });
     </script>
